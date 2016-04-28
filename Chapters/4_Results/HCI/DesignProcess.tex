@@ -1,0 +1,102 @@
+%\subsection{Design Process}
+\subsubsection{Sense the gap}
+As mentioned in section \ref{sec:sensethegap}, the group discovered shortcomings in the existing solution. The group therefore drafted a list of criterias (see list below) that the final product should meet, and it laid the foundation for further process. The new design should:
+
+\begin{itemize}
+    \item Be reliable.
+    \item Be easy to use.
+    \item Minimize the likelihood of user error.
+\end{itemize}
+
+
+\subsubsection{Understand and refine the problem}
+``System for Autonomous Self-Navigating Robots'' is a project that has been performed several times, but the system is no longer working. This years thesis main objective is to produce a better solution that will last significantly longer than the previous solutions.
+
+The group explored the existing solution to understand why it didn't work as expected, and tried to connect the findings to the three criterias defined in the "Sense the gap" phase.
+
+\textbf{Reliability}
+
+The existing solution was not perfect in terms of reliability. During testing of the system the user often experienced that the actions not always led to the expected behaviour. Many of the buttons functionality were removed, but the buttons were still present in the \acrshort{gui}. With this in mind the group designed an interface that consisted of a minimal set of functionality that met the requirements for functionality, as well as removing redundant components.
+
+\textbf{Usability}
+
+The existing solution had a \acrshort{gui} that contained lots of information and functionality. Many of the buttons were connected without any information about how they were connected, some of the buttons were representing the same actions, and some buttons did not work at all. the buttons together with many boxes presenting information, made the user interface complex and bad in terms of usability. The group used the previous solution to define guidelines for how the new system should be in terms of usability.
+
+\textbf{Minimize the likelihood of user error}
+
+Putting all of the functionality into the same screen makes it more likely for the user to make errors. By dividing functionality into sections, making the program as a sequence of actions, prevents user errors and makes the system appear more usable and reliable for the user. These criterias laid the basis for this years solution. 
+
+\subsubsection{Explore}
+Prior to developing design solutions the group made a list consisting all of the functionality that the \acrshort{gui} should provide (see Table \ref{tab:guicriterias}).
+\begin{table}[h]
+\begin{center}
+ \begin{tabular}{|l l|} 
+ \hline
+ Maps               &   World \\
+                    &   Robot/Local \\
+ \hline
+ Robot information  &   Robot type \\
+                    &   Position \\
+                    &   Orientation \\
+                    &   Tower angle \\
+ \hline
+ Indicators         &   Simulator on/off \\
+                    &   Manual drive/Autonomous \\
+                    &   Number of robots connected \\
+ \hline
+ Buttons            &   Simulator on/off \\
+                    &   Manual drive/Autonomous \\
+                    &   Connect to /disconnect robots \\
+                    &   Start/Stop \\
+
+\hline
+\end{tabular}
+\end{center}
+\caption{Criterias for functionality in the \acrshort{gui}}
+\label{tab:guicriterias}
+\end{table}
+
+\textbf{\acrlong{gui}, suggestion 1}
+
+\mabox{1}{Results/GUI1.PNG}{\acrlong{gui}, suggestion 1}{fig:gui1}
+The suggestion shown in Figure \ref{fig:gui1} has a start-up screen where the user selects either to run the simulator or to run the system in the real world. Choosing the mode brings the user to the main screen. In the main screen the information about the robot is presented as well as a local/world map toggled by a radio button group. To add more robots the user has to click on the the plus sign (new pane), and a pop-up present available robots to connect to.
+
+\textbf{\acrlong{gui}, suggestion 2}
+
+\mabox{1}{Results/GUI2.PNG}{\acrlong{gui}, suggestion 2}{fig:gui2}
+The suggestion shown in Figure \ref{fig:gui2} has, like the fist suggestion, a start-up screen that present two different modes (simulator and real world). Choosing the mode brings the user to a new dialog box where the user is presented with two different options: manual drive or autonomous. Clicking on the desired mode brings the user to the main screen. The main screen consists of a horizontal list of the connected robots and their information, as well as a map that can switch between different modes. To add a robot the user has to click "Add robot", and he/she is then presented available robots in a pop-up.
+
+\textbf{\acrlong{gui}, suggestion 3}
+
+\mabox{1}{Results/GUI3.PNG}{\acrlong{gui}, suggestion 3}{fig:gui3}
+The suggestion shown in Figure \ref{fig:gui3} does not have a start-up screen. The main screen presents the two different modes in the top left corner, and the rest of the functionality will be available after selecting a mode and pressing start. Further the main screen contains a list of connected robots and a world map. Clicking ``connect to more robots'' presents a pop-up similar to the other solutions, while clicking ``more'' (buttons next to connected robots) opens the robot screen. The robot screen presents information about the spesific robot, its local map, as well as an opportunity to enter manual drive mode for the robot.
+
+\subsubsection{Evaluation and feedback}
+The results from the user testing is shown in Figure \ref{fig:midlertidig}. In addition to rate the different suggestions, the test persons got to comment them as well. The feedback is listed in table \ref{tab:guifeedback}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|l | l|} 
+\hline
+Suggestion  &   Comments \\
+ \hline
+1           &   - A solution using panes to represent each robots gets complex if\\
+            &   many robots are connected. \\
+            &   - It is cumbersome to have to switch between panes to get info\\
+            &   about different robots. \\
+\hline
+2           &   - The main screen presents almost too much information. \\
+            &   - Choosing modes before entering the main screen can help\\
+            &   prevent user errors. \\
+\hline
+3           &   - It is straightforward to present the information about the\\
+            &   respective robots in a separate screen. \\
+            &   - Less is more. \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Criterias for functionality in the \acrshort{gui}}
+\label{tab:guifeedback}
+\end{table}
+
+\mabox{0.8}{Other/midlertidig.png}{MIDLERTIDIG}{fig:midlertidig}

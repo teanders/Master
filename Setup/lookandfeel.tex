@@ -1,0 +1,48 @@
+%\floatstyle{boxed} 
+\definecolor{headercolor}{gray}{0.45}
+\definecolor{gray75}{gray}{0.75}
+\restylefloat{figure}
+
+\renewcommand*\contentsname{Table of Contents}
+
+%% Header + Footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\textcolor{headercolor}{\markboth{\chaptername\ \thechapter.\ #1}}{}}
+\renewcommand{\sectionmark}[1]{\textcolor{headercolor}{\markright{\thesection\ #1}}}
+\renewcommand{\headrulewidth}{0.1ex}
+\renewcommand{\footrulewidth}{0.1ex}
+\setlength{\headheight}{21pt} 
+\renewcommand{\headrule}{\hbox to\headwidth{%
+\color{headercolor}\leaders\hrule height \headrulewidth\hfill}}
+
+\renewcommand{\footrule}{\hbox to\headwidth{%
+\color{headercolor}\leaders\hrule height \footrulewidth\hfill}}
+
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[LE,RO]{\thepage}\renewcommand{\headrulewidth}{0ex}}
+
+
+%\textcolor{gray79}{\sc{Page \thepage { }of \pageref*{LastPage}
+
+
+
+
+\linespread{1.25}                    % Avstand mellom linjene, 1.5 er ifra NTNU hadde 1.25 i Risiko
+\setcounter{tocdepth}{2}            % 
+\pdfcompresslevel=9                 % PDF Compress lvl, litt usikker men 9 er høyest
+\setlength{\parindent}{0pt}         % Ikke innrykk etter paragraf
+%\bibliographystyle{IEEEtran}        % IEEE, biblografi stil. dette er standaren
+
+%% Kopiert disse ifra forige rapport... Usikker på om vi trenger den øverste linja hær, eller om den siste overskriver den øverste..
+
+%Kansje ha med [hang] etter chapter 
+\titlespacing{\chapter}{0pt}{-30pt}{20pt} %avstand ifra høyre, over og under et  kapittel. PS husk \hsp
+
+\titleformat{\chapter}{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}                     % Hvordan kapittel ser ut
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+\section{Previous work}
+\subsubsection{Control system}
+\task{Skrive om tidligere arbeid på control systemet, altså det som foregikk i MATLAB}
+\subsubsection{Robots}
+\task{Skrive raskt hvordan ting var på robot fronten}
+
+\subsubsection{Why Build the entire program from scratch??}
+Skrive om hvorfor vi valgte å skrive om hele programmet.
+
+\begin{itemize}
+    \item utdatert system med både synlige og usynlige mangler
+    \item MatLab som styreprogram er lite egnet til real time.
+    \item kommunikasjon fra pc til robotene er ``lettere'' fra et javaprogram
+    \item java kjører på ferdigkompilert kode, tar liten plass, kan kjøre på ``alle'' typer datamaskiner
+    \item uryddig kode, mye som ikke fungerte, mye kode som ikke var i bruk, lite hensyn til programmeringsnormene cohesion og coupling
+    \item ikke modulær/mudularisert kode, vanskelig å forbedre/utvide programmet uten å måtte endre mye
+    \item ikke mulighet til å koble til n-antall roboter, da man må kjøre én instans per robot tilkoblet
+    \item matlab er et ``tungt'' styreprogram å bruke, stiller krav til serverpc'en
+\end{itemize}
+
+\subsubsection{Why Java?}
+Skrive om hvorfor det ble valgt java.
+
+\begin{itemize}
+    \item bra for realtime
+    \item ferdigkompilert kode
+    \item programmet kan kjøres fra de fleste datamaskiner
+    \item 
+\end{itemize}
+
+\subsubsection{Why build a new robot?}
+Skrive om hvorfor vi bygde en ny robot.
+
+\begin{itemize}
+    \item Innføre en ny robot basert på et annet system (android)
+    \item gjøre det mulig å teste systemet med flere roboter
+    \item læringsprosessen ved å bygge en robot
+\end{itemize}
+

@@ -1,0 +1,132 @@
+%%------------%%
+%%-Eviroments-%%
+%%------------%%
+
+
+
+%%-----------%%
+%%-Commmands-%%
+%%-----------%%
+% \hsp      % horisontal space
+% \info     % info text, skal ikke være med i fullført kode
+% \ebox     % Lager en svart box rundt parameteret sitt
+% \tebox    % Tar inn 3 parametre, 1 størrelse, 2 plassering, 3 caption/label, setter bildet inn
+% \kbox     % Tar inn samme 3 parametrene som tebox, legger de inn i ebox
+% \mabox     % Tar inn ett eksra parameter, lager tebox, siste parameter er label.
+%
+%
+
+\newcommand{\usikker}[1]{\textcolor{Peach}{#1}}
+
+%Husker ikke kor vi bruker \hsp men vet vi bruker det en plass
+\newcommand{\hsp}{\hspace{20pt}}
+
+\newcommand{\info}[1]{
+%   \textcolor{NavyBlue}{#1}
+}
+
+%Lager en svart box rundt parameteret sitt
+\newcommand{\ebox}[1]{
+    \setlength{\fboxsep}{1pt}   % 1
+    \setlength{\fboxrule}{2pt}  % 2
+    \fbox{#1}
+}
+
+\newcommand{\tebox}[3]{
+\begin{figure}[ht]
+        \begin{center}
+        \includegraphics[width=#1\textwidth]{Images/#2}
+        \end{center}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+
+\newcommand{\mabox}[4]{
+\begin{figure}[ht]
+        \begin{center}
+        \includegraphics[width=#1\textwidth]{Images/#2}
+        \end{center}
+        \caption{#3}
+        \label{#4}
+    \end{figure}
+}
+
+%Tar inn 3 parameter og lager en figur
+%parameter 1 = størrelse 1=full, 0,1 = 10% størrelse osv
+%parameter 2 = filnavn på bildet
+%parameter 3 = label og caption på bildet
+\newcommand{\kbox}[3]{
+\begin{figure}[ht]
+        \begin{center}
+        \ebox{\includegraphics[width=#1\textwidth-6pt]{Images/#2}}
+        \end{center}
+        \caption{#3}
+            \label{#3}
+    \end{figure}
+}
+
+\newenvironment{material}[2]{
+    \begin{minipage}{0.3\textwidth}
+    \ebox{\includegraphics[width=1\textwidth-6pt]{Images/#1}}
+    \vspace{-20pt}
+    \captionof{figure}{#2}
+    \label{#2}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+    \vspace{-30pt}
+    \begin{itemize}
+}
+{
+    \end{itemize}
+    \end{minipage}
+    \vspace{10pt}
+}
+
+
+\newcommand{\begrep}[2]{
+\begin{minipage}{0.25\textwidth}
+\textbf{#1}\end{minipage}
+\begin{minipage}{0.65\textwidth}
+#2
+\end{minipage}\par
+\vspace{-5pt}
+}
+
+\newcommand{\nomenom}[2]{
+\begin{minipage}{0.13\textwidth}
+#1\end{minipage}\begin{minipage}{0.05\textwidth}
+-\end{minipage}
+\begin{minipage}{0.77\textwidth}
+#2
+\end{minipage}\par
+\vspace{-5pt}
+}
+
+\newcommand{\svar}[1]{
+\underline{\underline{#1}}
+}
+
+\newcommand{\navn}[1]{
+\medskip
+\textbf{#1}\par
+}
+
+\newcommand{\toBilder}[6]{
+    \begin{minipage}{0.5\textwidth}
+    \includegraphics[width=1\textwidth-6pt]{Images/#1}
+    \vspace{-20pt}
+    \captionof{figure}{#2}
+    \label{#3}
+    \end{minipage}\hspace*{\fill}\begin{minipage}{0.5\textwidth}
+    \includegraphics[width=1\textwidth-6pt]{Images/#4}
+    \vspace{-20pt}
+    \captionof{figure}{#5}
+    \label{#6}
+    \end{minipage}
+}
+
+\newcommand{\HRule}{\rule{0.7\linewidth}{0.5mm}}
+
+
+
