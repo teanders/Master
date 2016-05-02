@@ -8,3 +8,16 @@
     \item integration
     \item integration testing
 \end{itemize}
+
+\subsubsection{Software Construction}
+\label{softconstruct}
+Developing software is a complicated process, and there are several activities that together form the software construction. Topics like ``Problem definition'', ``Software architecture'', ``Integration'' and ``System testing'' are central in the process of constructing a well functioning application (see Figure \ref{fig:softconstruct}).
+
+\mabox{0.6}{Theory/softwareconstruction.PNG}{Activities that form software construction (\cite{stevemcconnell2004})}{fig:softconstruct}
+
+When designing software it is important to minimize the complexity. Make the system easy-to-understand, without making designs that are ``clever'' inside your head. The system should be self-explanatory in the means that it should be easy to understand if someone in the future would want to do some maintenance to it. It is important that the connection between different parts of the program follows the principles of ``High cohesion'' and ``Loose coupling'':
+\begin{itemize}
+	\item High cohesion - Cohesion refers to how the classes in the system are defined to take care of one responsibility, and how the different classes use methods and such from one another (\cite{adamcarlson}).
+	\item Low coupling - Good abstractions, ecapsulation and information hiding makes the number of interconnections as low as possible, and thus leads to loose coupling (\cite{adamcarlson}).
+\end{itemize}
+Extensibility and reusability leads to easier maintenance and implemention as well, and should therefore be taking into account as well.
