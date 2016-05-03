@@ -7,7 +7,6 @@
 \input{Chapters/todo}
 
 \input{Chapters/0_Preamble/main}
-
 \input{Chapters/1_Introduction/main}
 \input{Chapters/2_TheoryBackground/main}
 \input{Chapters/Material/main}
@@ -17,35 +16,12 @@
 \input{Chapters/6_FutureWork/main}
 
 \listoftodos[Notes]
-
-%\input{lipsum}
-
-% %% PART 1
-% %%The title page will be automatically generated and added by the DAIM system
-% \input{dedication.tex}		%% Optional
-
-% %% PART 2
-% \input{summary.tex}		%% Optional
-% \input{preface.tex}		%% Optional
-% \input{list.tex}			%% Generate TOC, list of tables, and list of figures automatically
-% \input{abbreviations.tex}	%% Optional
-
-
-
-% %% PART 3 -- The Chapters
-% \input{chapter1.tex}		%% Edit each chapter
-% \input{chapter2.tex}
-% \input{chapter3.tex}
-% \input{chapter4.tex}
-% \input{chapter5.tex}
-% \input{chapter6.tex}
-
-% %% PART 4
 \printglossary
 \addcontentsline{toc}{chapter}{Glossary}
+%\bibliographystyle{apa}
 
-\bibliographystyle{apa}
 \addcontentsline{toc}{chapter}{\bibname}
-\bibliography{refs}
+%\bibliography{refs}
+\printbibliography
 
 \end{document}
