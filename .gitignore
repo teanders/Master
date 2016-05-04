@@ -11,5 +11,9 @@ main.pdf
 main.synctex.gz
 main.tdo
 main.toc
+main.bcf
+main.fls
+main.fdb_latexmk
+main.run.xml
 sublimeproject.sublime-project
 sublimeproject.sublime-workspace
