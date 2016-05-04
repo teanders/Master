@@ -1,2 +1,10 @@
+%%% IMU %%%
 \subsection{Inertial Measuring Unit}
-\task{Hent inspirasjon fra IMU i fjor sommer. det vi skrev i ene øvingen}
+\acrfull{imu} is a single unit which collects angular velocity, linear acceleration and sometimes magnetic field data. An \acrshort{imu} consists of accelerometers, gyroscope and sometimes a magnetometer \cite{vik}. 
+%Skrive om 3DOF, 6DOF?
+
+\subsubsection{Accelerometer}
+There are several different types of accelerometers, the most commonly used in inertial navigation systems are the \textit{closed loop pendulous accelerometers}, these can be implemented in \acrfull{mems}. These work as a mass is maintained in its null position by an electromagnetic device, when there is a change of movement on the accelerometer the magnitude of the electric current in the coils change \cite{vik}.
+
+\subsubsection{Gyroscope}
+In the same manner as accelerometers, there are several types of gyroscopes. The most common for low and medium cost applications are the vibratory gyroscopes which can be implemented in \acrshort{mems}, these gyros use the law of Coriolis to measure angular velocity. The gyros are typically designed as an electronically driven resonator fabricated out of a single piece of quartz or silicon. The Coriolis force can then be measured capacitively in a silicon instrument or piezoelectrically in a quartz instrument \cite{vik}.
