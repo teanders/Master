@@ -539,6 +539,14 @@ INPUT c:/texlive/2015/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT c:/texlive/2015/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT Chapters/2_TheoryBackground/Theory/Physical/MicroComputers.tex
 INPUT Chapters/2_TheoryBackground/Theory/Physical/MicroComputers.tex
+INPUT Images/Theory/atmega2560.png
+INPUT ./Images/Theory/atmega2560.png
+INPUT ./Images/Theory/atmega2560.png
+INPUT c:/texlive/2015/texmf-dist/fonts/tfm/public/lm/ec-lmr9.tfm
+INPUT c:/texlive/2015/texmf-dist/fonts/tfm/public/lm/ec-lmbx9.tfm
+INPUT Images/Material/Nrf51dongle.JPG
+INPUT ./Images/Material/Nrf51dongle.JPG
+INPUT ./Images/Material/Nrf51dongle.JPG
 INPUT Chapters/2_TheoryBackground/Theory/Physical/IMU.tex
 INPUT Chapters/2_TheoryBackground/Theory/Physical/IMU.tex
 INPUT c:/texlive/2015/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
@@ -555,8 +563,6 @@ INPUT Chapters/2_TheoryBackground/Theory/ProgrammingPlatform/Java.tex
 INPUT Images/Theory/JVM.png
 INPUT ./Images/Theory/JVM.png
 INPUT ./Images/Theory/JVM.png
-INPUT c:/texlive/2015/texmf-dist/fonts/tfm/public/lm/ec-lmr9.tfm
-INPUT c:/texlive/2015/texmf-dist/fonts/tfm/public/lm/ec-lmbx9.tfm
 INPUT Chapters/2_TheoryBackground/Theory/ProgrammingPlatform/Arduino.tex
 INPUT Chapters/2_TheoryBackground/Theory/ProgrammingPlatform/Arduino.tex
 INPUT Chapters/2_TheoryBackground/Theory/ProgrammingPlatform/C.tex
@@ -617,7 +623,6 @@ INPUT Images/Material/Levelconverter.jpg
 INPUT ./Images/Material/Levelconverter.jpg
 INPUT ./Images/Material/Levelconverter.jpg
 INPUT Images/Material/Nrf51dongle.JPG
-INPUT ./Images/Material/Nrf51dongle.JPG
 INPUT ./Images/Material/Nrf51dongle.JPG
 INPUT Chapters/3_Methods/main.tex
 INPUT Chapters/3_Methods/main.tex
