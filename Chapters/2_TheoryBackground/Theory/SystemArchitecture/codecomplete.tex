@@ -3,18 +3,18 @@
 \label{sec:softconstruct}
 Developing software is a complicated process, and there are several activities that together form the software construction. Topics like ``Problem definition'', ``Software architecture'', ``Integration'' and ``System testing'' are central in the process of constructing a well functioning application (see Figure \ref{fig:softconstruct}).
 
-\mabox{0.6}{Theory/softwareconstruction.PNG}{Activities that form software construction (\cite{stevemcconnell2004})}{fig:softconstruct}
+\mabox{0.6}{Theory/softwareconstruction.PNG}{Activities that form software construction \cite{stevemcconnell2004}}{fig:softconstruct}
 
 When designing software it is important to minimize the complexity. Make the system easy-to-understand, without making designs that are ``clever'' inside your head. The system should be self-explanatory in the means that it should be easy to understand if someone in the future would want to do some maintenance to it. It is important that the connection between different parts of the program follows the principles of ``High cohesion'' and ``Loose coupling'':
 \begin{itemize}
-	\item High cohesion - Cohesion refers to how the classes in the system are defined to take care of one responsibility, and how the different classes use methods and such from one another (\cite{adamcarlson}).
-	\item Low coupling - Good abstractions, ecapsulation and information hiding makes the number of interconnections as low as possible, and thus leads to loose coupling (\cite{adamcarlson}).
+	\item High cohesion - Cohesion refers to how the classes in the system are defined to take care of one responsibility, and how the different classes use methods and such from one another \cite{adamcarlson}.
+	\item Low coupling - Good abstractions, ecapsulation and information hiding makes the number of interconnections as low as possible, and thus leads to loose coupling \cite{adamcarlson}.
 \end{itemize}
 Extensibility and re-usability leads to easier maintenance and implementation as well, and should therefore be taking into account as well. 
 
 \subsubsection{Levels of design}
 \label{sec:levdes}
-When starting the design of a software application, Steven McConnell mentions the five levels of design. The five levels of design, shown in Figure \ref{fig:5levels}, describes the levels of detail in a software system and how the system developer should approach to the problem:
+When starting the design of a software application, Steven McConnell mentions the five levels of design. The five levels of design, shown in Figure \ref{fig:5levels}, describes the levels of detail in a software system and how the system developer should approach to the problem \cite{stevemcconnell2004}:
 \begin{itemize}
 	\item Software system - Describe the entire system and how it should work
 	\item Division into subsystems/packages - Describe how the system should be built up by subsystems that takes care of different areas of responsibility, and how the subsystems should use other subsystems.
@@ -22,14 +22,13 @@ When starting the design of a software application, Steven McConnell mentions th
 	\item Division into data and routines within classes - Describe the class routines in detail. This will lead to a better understanding of the class's interface.
 	\item Internal routine design - Describe the detailed functionality of the routines (e.g. using pseudocode).
 \end{itemize}
-(\cite{stevemcconnell2004})
-\mabox{.8}{Theory/5levels.PNG}{The five levels of design in a program (\cite{stevemcconnell2004})}{fig:5levels}
+\mabox{.8}{Theory/5levels.PNG}{The five levels of design in a program \cite{stevemcconnell2004}}{fig:5levels}
 
 \subsubsection{Naming conventions}
 \label{sec:nameconv}
 It is important to choose good, describing names when programming a complex software system. The routine-name should describe the behaviour and the output of the routine, and in that way it is clear what the routine should be used to do. The routines should not be differentiated by number, but by functionality. The variables should also have describing names, and be differentiated from the types using lower case on the first letter (TypeName variabelName).
 
-The different programming languages has different conventions. Some of the Java-specific conventions are:
+The different programming languages has different conventions. Some of the Java-specific conventions are \cite{stevemcconnell2004}:
 \begin{itemize}
 	\item Class names capitalize the first letter of each word.
 	\item \textit{i} and \textit{j} are integer indexes.
