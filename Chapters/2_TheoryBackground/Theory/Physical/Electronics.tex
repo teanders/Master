@@ -1,11 +1,13 @@
 \subsection{Electronics}
+\task{Skrive om LLC?}
+\task{Skrive om IR?}
 \subsubsection{Capacitor}
 \label{sec:capacitor}
-Capacitors come in different sizes and materials, the most popular being electrolytic capacitors for values greater than 1µF and ceramic capacitors for values lower. 
+Capacitors comes in many different sizes and materials, the most popular being electrolytic capacitors for values greater than 1µF and ceramic capacitors for lower values. In this thesis there were mainly two applications areas for capacitors, these are further explained below.
 
-If a component has a sudden high demand of power, the demand can be enough to drop the voltage in the circuit and other components can start to misbehave. By adding a high value capacitor between ground and vcc, the capacitor will act as a reservoir of electricity, so that the component will draw charge from both the supply and the capacitor. A typical component where this is needed is a servo motor that draws a lot of power as the motor is starting. A good default value for a servo motor is 220uF to 430uF, depending on the application \cite{highcapacitor}.
+If a component has a sudden high demand of power, the demand can be enough to drop the voltage in the circuit and other components can start to misbehave. By adding a high value capacitor between ground and VCC, the capacitor will act as a reservoir of electricity, so that the component will draw charge from both the supply and the capacitor. A typical component where this is needed is a servo motor that draws a lot of power as the motor is starting. A good default value for a servo motor is 430uF, depending on the application \cite{highcapacitor}.
 \task{Legge inn bilder av de? eventuelt koblingskjema?}
 
-The capacitor also has another nice feature, in a DC circuit it can filter out high frequency AC noise. Not all components needs pure DC signal, but some components such as logic chips may start to operate incorrectly if the voltages swing to much. By placing a capacitor between ground and vcc the capacitor acts as a bypass capacitor and shorts the AC signal which removes any AC noise on the DC voltage. Typically this kind of capacitor does not need to be the same size as the first described one, a good default value is 100nF ceramic capacitor \cite{lowcapacitor} 
+The capacitor also has another nice feature, in a DC circuit it can filter out high frequency AC noise. Not all components needs pure a DC signal, but some components such as logic chips may start to operate incorrectly if the voltages swing to much. By placing a capacitor between ground and VCC the capacitor acts as a bypass capacitor and shorts the AC signal which removes any AC noise on the DC voltage. Typically this kind of capacitor is smaller in size than the one described first, a good default value is 100nF ceramic capacitor \cite{lowcapacitor}.
 
 For both type of capacitors it is important to put the capacitor as close to the component as possible.
