@@ -1,3 +1,16 @@
 \subsection{Serial Communication}
-\subsubsection{Uart}
-\subsubsection{Serial Peripheral Interface}
+\subsubsection{Universal Asynchronous Receiver/Transmitter (UART)}
+The \acrfull{uart} is a bus that acts as a converter between parallel and serial interfaces. It enables a computer that uses a RS-232 interface to communicate with peripherals that uses two-wired Serial RX-TX (see Figure \ref{fig:uart}) \cite{whatisuart}.
+\mabox{.8}{Theory/uart.PNG}{Simplified UART Interface \cite{sparkfunuart}}{fig:uart}
+\acrshort{uart}s are responsible for sending and receiving serial data. On the transmit side, a data packet is created and sent at the TX line, while on the receive end, the \acrshort{uart} has to sample the RX line at the expected baud rate \cite{sparkfunuart}.
+
+\subsubsection{Serial Peripheral Interface (SPI)}
+The \acrfull{spi} was developed by Motorola to provide short-distance communication, primarily for use in embedded systems \cite{corelis2016}. The standard provides full-duplex synchronous serial communication over a 4-wired interface with the following signals \cite{epanorama2011}:
+\begin{itemize}
+	\item \textit{MOSI} - Master-out, Slave-in
+	\item \textit{MISO} - Master-in, Slave-out
+	\item \textit{SCLK} - Serial clock
+	\item \textit{SS} - Slave Select
+\end{itemize}
+\mabox{.8}{Theory/spi.PNG}{SPI Interface \cite{sparkfunspi}}{fig:spi}
+\acrshort{spi} is a single master-multiple slave protocol (see Figure \ref{fig:spi}), and the master sends/requests information to/from the slaves by pulling the SS low at the specific slave, activates the clock signal and generates information onto MOSI while it samples the MISO line \cite{byteparadigm}. For further reading and as an introduction to the practical use of \acrshort{spi}, see the ``\acrfull{spi}''-tutorial at SparkFun \cite{sparkfunspi}.
