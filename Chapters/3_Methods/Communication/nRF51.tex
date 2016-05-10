@@ -1,1 +1,25 @@
 \subsection{Programming the nRF51-dongle}
+\textit{This section covers the programming of the nRF51-server dongle. For information about the programming of the nRF51-peripherals, see Erlend Ese (2016).}
+
+\subsubsection{Requirements}
+\label{sec:nrfrequirements}
+To program the nRF51-dongles, the following software has to be downloaded and installed:
+\begin{itemize}
+	\item nRF51 SDK10\cite{nrf51sdk}
+	\item nRFgo Studio v1.21\cite{nrfgo}
+	\item Keil MDK-ARM v5.20\cite{keil}
+\end{itemize}
+
+\textbf{Setting up the nRF51-dongle}
+
+Having installed all the software listed in Section \ref{sec:nrfrequirements}, the following procedure has to be followed to flash the dongle and prepare it for programming:
+\begin{enumerate}
+	\item Plug in the nRF51-dongle to one of the external USB-ports at the computer.
+	\item Start nRFgo Studio, and choose the desired device in the ``Device Manager''-list.
+	\item Click ``Erase all''.
+	\item Then choose the ``Program SoftDevice''-pane in the right panel and click ``Browse...''.
+	\item Navigate to ``[yourDestination]/nrf51\_sdk10/components/softdevice/s130/hex'' and choose the ``s130\_nrf51\_x.x.x\_softdevice''.
+	\item Click ``Program''.
+\end{enumerate}
+
+\subsubsection{Developing the nRF51-server software}
