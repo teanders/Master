@@ -7,23 +7,30 @@ Erlend Ese bought five nRF51 Dongles from Omega Verksted NTNU, one of these wher
 
 All metallic parts and the two charging towers where manufactured by the cybernetics mechanical workshop at NTNU.
 
-\improvement{Putte dette i resultat?}{The \acrshort{pcb} where designed in Eagle and printed by Elprolab at NTNU\cite{elprolab}. The plastic housing around the motors where designed in SolidWorks and 3D printed by the cybernetics mechanical workshop.}
+\improvement{Putte dette i resultat?}{The \acrshort{pcb} where designed in Eagle and printed by Elprolab\cite{elprolab} at NTNU. The plastic housing around the motors where designed in SolidWorks and 3D printed by the cybernetics mechanical workshop.}
 
 All remaining parts where ordered from SparkFun early in the second week.
 
 %%%%
 
-
 \subsubsection{Assembly}
-The robot chassis consists of two parts which can be separated into the top and bottom.
+The robot chassis consists of two parts which can be separated into top and bottom.
 
 bottom
 
-The battery, wheels and IMU is all mounted at the bottom part. To make the car turn around its own axis, the best placement for the two wheels was in the exact middle of the car. The IMU is placed right between the two wheels. 
+The two driving wheels are mounted in the centre on the bottom plate, this makes the robot turn radius as good as possible. The IMU were placed right between the two wheels at the exact center of the robot, this makes it easier to calculate IMU output. The metal casting was mounted back in the centre of the car. A thin metal plate was cut to make sure the casting ball was at the correct height for the bottom plate to be pararell to the ground. The battery which is the heaviest component on the car is placed right above the casting ball, making sure the robot is back heavy. At this point there was not much room left on the bottom plate, just a small room right in front, this is the spot where the breadboard was put.
+
+All around the robot, between the bottom and the top plate, small plastic pillars were installed to connect the plates. Also the charging towers are designed to add an extra connection between the two plates.
+
+top
+
+On the top plate
+
+The battery, wheels and IMU were all mounted at the bottom part. To make the car turn around its own axis, the best placement for the two wheels was in the exact middle of the car. The IMU were placed right between the two wheels. 
 \task{Skrive om kordan bilen er bygd opp}
 
 \subsubsection{Wiring}
-Skrive hvordan delene er koblet sammen, forklare koblingsskjema
+Before the components where connected together, a wiring diagram (Figure \ref{fig:ardubot}) were created. This ensured that all connections were done correctly and made it easier for maintenance/troubleshooting. Standard colouring conventions were used with red as plus and black as minus, signal cables uses other colours depending on the component. When the prototype was first created all the wires were connected to a breadboard, this made it easy to test if all components were connected correct and if they worked as intented. At a later stage in the project the breadboard was replaced by a PCB which acts like a arduino shield, this is further explained in Section \ref{sec:improvements}.
 \mabox{1}{Results/ardubot.pdf}{Arduino bot wiring}{fig:ardubot}
 
-\subsubsection{Soldering}
+Connections between components were done with selfmade jumper wires, this also makes it more straightforward than many different wires on the same board. Soldering where used to connect wires to the two switches and to the charging tower springs. All work with soldering were done in the cybernetics workshop, since it was a safe enviroment with sufficient ventilation.
