@@ -1,0 +1,37 @@
+\section{Designing the robot}
+The robot design were planned out during the first week of the project. During this week the group discussed which parts where necessary to build a robot that meets our goal. The entire robot was planned out before ordering any parts to make sure that there was no unnecessary purchases. It was important to order all parts as soon as possible as shipping time can be large when ordering from across the planet.
+
+The robots should be enable to charge itself when it has low battery, and there is currently one charger that every robot shares. This means that the new robot should be able to use the old charger. Because of this, the new robot has a 11.1V lithium battery which can charge itself using the same charger. This was bought from a Norwegian vendor called Elfa Distrelec\cite{elfa} since the price of lithium batteries was the same as ordering from outside Norway.
+
+Erlend Ese bought five nRF51 Dongles from Omega Verksted NTNU, one of these where used in the robot.
+
+All metallic parts and the two charging towers where manufactured by the cybernetics mechanical workshop at NTNU.
+
+\improvement{Putte dette i resultat?}{The \acrshort{pcb} where designed in Eagle and printed by Elprolab\cite{elprolab} at NTNU. The plastic housing around the motors where designed in SolidWorks and 3D printed by the cybernetics mechanical workshop.}
+
+All remaining parts where ordered from SparkFun early in the second week.
+
+%%%%
+
+\subsection{Assembly}
+The robot chassis consists of two parts which can be separated into top and bottom.
+
+\textit{bottom}\\
+The two driving wheels are mounted in the centre on the bottom plate, this makes the robot turn radius as good as possible. The IMU were placed right between the two wheels at the exact center of the robot, this makes it easier to calculate IMU output. The metal casting was mounted back in the centre of the car. A thin metal plate was cut to make sure the casting ball was at the correct height so that the bottom plate were pararell to the ground. The battery which is the heaviest component on the car, is placed right above the casting ball, making sure the robot is back heavy. At this point there was not much room left on the bottom plate, just a small room right in front, this is the spot where the breadboard was put.
+
+All around the robot, between the bottom and the top plate, small plastic pillars were installed to connect the plates. Also the charging towers are designed to add an extra connection between the two plates.
+
+\textit{top}
+\\
+The servo and the \acrshort{ir} tower is placed in such order that the tower rotates at the center of the robot. The tower itself is made out of lego bricks, and is made the same as the \acrshort{ir} tower on the other robots. This makes it easier to take off and switch sensors if needed. The motor controller is placed right behind the \acrshort{ir} tower, and in front of the tower is the arduino. Both the arduino and \acrshort{ir} tower is elevated so that wires can be run under. Connected to the top plate but facing towards the bottom plate is the wheel encoders, they are placed in such order that they match up with the motors that are placed on the bottom plate. The wheel encoder sensors are placed circa 2mm from the magnet rings on the motors.
+
+There is several pictures of the robot in the appendix.
+\task{APPEEEENDIIX}
+%The battery, wheels and IMU were all mounted at the bottom part. To make the car turn around its own axis, the best placement for the two wheels was in the exact middle of the car. The IMU were placed right between the two wheels. 
+%\task{Skrive om kordan bilen er bygd opp}
+
+\subsection{Wiring}
+Before the components where connected together, a wiring diagram (Figure \ref{fig:ardubot}) were created. This ensured that all connections were done correctly and made it easier for maintenance/troubleshooting. Standard colouring conventions were used with red as plus and black as minus, signal cables uses other colours depending on the component. When the prototype was first created all the wires were connected to a breadboard, this made it easy to test if all components were connected correct and if they worked as intented. At a later stage in the project the breadboard was replaced by a PCB which acts like a arduino shield, this is further explained in Section \ref{sec:improvements}.
+\mabox{1}{Results/ardubot.pdf}{Arduino bot wiring}{fig:ardubot}
+
+Connections between components were done with selfmade jumper wires, this also makes it more straightforward than many different wires on the same board. Soldering where used to connect wires to the two switches and to the charging tower springs. All work with soldering were done in the cybernetics workshop, since it was a safe enviroment with sufficient ventilation.
