@@ -14,4 +14,15 @@ As SolidWorks, see Section \ref{sec:software}, is a modelling software, it was s
 \toBilder{Methods/MotorHolder1}{Motor holder design}{fig:mothold1}{Methods/MotorHolder2}{Motor holder design}{fig:mothold2}
 
 \subsection{Designing the Printed Circuit Board}
-Connecting wires with a breadboard is nice for prototyping, but when the robot is finished it should have a \acrshort{pcb} that connects the different components together. 
+Connecting wires with a breadboard is nice for prototyping, but when the robot is finished it should have a \acrshort{pcb} that connects the different components together. After all components were tested and the wiring was confirmed to be correct a \acrshort{pcb} was designed in Eagle. This was done in five steps.
+\begin{enumerate}[1.]
+\item The wiring diagram designed earlier in Microstation (see Figure \ref{fig:arduinomicrostation}) was converted to a schematic in Eagle. The schematic determines how the different components is connected to each other. Figure 
+%\ref{pcbschematic} 
+illustrates the schematic design.
+\item From the schematic a board is created in Eagle. The board file determines the layout, how the different components and wires should be printed on the finished \acrshort{pcb}. The board was designed in such order that it could be placed right on top of the Arduino. Figure 
+%\ref{pcbboard} 
+illustrates the schematic design.
+\item When the \acrshort{pcb} design was finished in Eagle, the Eagle files was converted to Gerber files. The Gerber files is responsible for how the board should be printed, and is an instruction for the \acrshort{pcb} printer.
+\item The Gerber files was sent to Elprolab who printed the \acrshort{pcb}.
+\item Every component was then soldered onto the \acrshort{pcb}, this was done manually at the cybernetics workshop since it has good equipment and safe environment with sufficient ventilation.
+\end{enumerate}
