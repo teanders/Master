@@ -1,7 +1,17 @@
 \section{Structure}
+\textit{Seven modules form the system, see Figure \ref{fig:sysstruct}, each taking care of one area of responsibility. This thesis covers the four modules ``Application'', ``Communication'', ``Robot'' and ``GUI''. For information about the three modules ``Simulator'', ``Mapping'' and ``Navigation'', please refer to thesis Thon(2016).}
 
-\mabox{.9}{Results/UML-Package-Application}{UML of ``Application''-package}{fig:umlapplication}
-\mabox{.9}{Results/UML-Package-Communication}{UML of ``Communication''-package}{fig:umlcommunication}
-\mabox{.9}{Results/UML-Package-Robot}{UML of ``Robot''-package}{fig:umlrobot}
-\mabox{.9}{Results/UML-Package-GUI}{UML of ``GUI''-package}{fig:umlgui}
-\mabox{1}{Results/UML}{UML of ``SSNAR''}{fig:uml}
+\subsection{The modules}
+\subsubsection{Application}
+The ``Application'' module is the main module in the system. The module is the one that ties the system together by being the main artery for communication and program flow internally in the application. ``Application'' instantiates the other modules and connects the packages in the program.
+
+\subsubsection{Robot}
+The ``Robot'' module represents the physical robots that the system uses. When connecting to a real-life robot, e.g. the Arduino robot, an object related to that robot is instantiated in the module. The object holds information about the associated robot and contains measurements received from the robot.
+
+\subsubsection{Communication}
+The ``Communication'' module represents the link between the physical world and the server application. It takes care of the serial communication with the nRF51-dongle as well as providing message input and output. The module also provides functionality for encoding and decoding messages.
+
+\subsubsection{GUI}
+The ``GUI'' module provides the applications \acrshort{hci} interface. It presents information about the robots connected to the system and map plotting of the mapped areas as well as it provides functionality for connecting/disconnecting and controlling the robots.
+
+\mabox{.9}{Results/Structure-System}{Structure of the system modules}{fig:sysstruct}
