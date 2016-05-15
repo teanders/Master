@@ -2,11 +2,11 @@
 \label{sec:improvements}
 
 \subsection{Designing the Motor Holder}
-The assembled robot, as can be seen in Figure \ref{fig:robpremothold}, was too heavy in the center, and this led to the wheels leaning towards the chassis. As this would have influenced the performance of the robot while driving, the group decided to improve the assembled robot to neutralize the maldistribution of weight. It was decided to design and 3D-print a motor holder that should prevent the wheel angulation.
+The assembled robot as can be seen in Figure \ref{fig:robpremothold}, was too heavy in the center, and this led to the wheels leaning towards the chassis. As this would have influenced the performance of the robot while driving, the group decided to improve the assembled robot to neutralize the maldistribution of weight. It was decided to design and 3D-print a motor holder that should prevent the wheel angulation.
 
-As SolidWorks, see Section \ref{sec:software}, is a modelling software, it was suited to use for this task. Measuring the physical robot gave an accurate basis for designing the motor holder, taking screws and nuts mounted to the chassis into account. The measurements and shapes obtained from the physical robot were modelled in SolidWorks, using one of the ``Get started'' tutorials in the software as guidance.
+As SolidWorks, see Section \ref{sec:software}, is a modeling software, it was suited to use for this task. Measuring the physical robot gave an accurate basis for designing the motor holder, taking screws and nuts mounted to the chassis into account. The measurements and shapes obtained from the physical robot were modeled in SolidWorks, using one of the ``Get started'' tutorials in the software as guidance.
 
-\textbf{Modelling the Motor Holder using Solidworks}
+\textbf{Modeling the Motor Holder using Solidworks}
 \task{Skal fremgangsmåten for modelleringen beskrives enkelt og greit her (det er sikkert greit sidefyll + enkelt å skrive om)? Hvis ikke, må de skrives noen setninger til som gjør at vi kan referere til bildene (\ref{fig:mothold1} og \ref{fig:mothold2})}
 
 \mabox{.5}{Methods/RobotWithoutMotorHolder.png}{Robot without improvements}{fig:robpremothold}
@@ -14,15 +14,15 @@ As SolidWorks, see Section \ref{sec:software}, is a modelling software, it was s
 \toBilder{Methods/MotorHolder1}{Motor holder design}{fig:mothold1}{Methods/MotorHolder2}{Motor holder design}{fig:mothold2}
 
 \subsection{Designing the Printed Circuit Board}
-Connecting wires with a breadboard is nice for prototyping, but when the robot is finished it should have a \acrshort{pcb} that connects the different components together. After all components were tested and the wiring was confirmed to be correct a \acrshort{pcb} was designed in Eagle. This was done in five steps.
+Connecting wires with a breadboard is nice for prototyping, but when the robot is finished, it should have a \acrshort{pcb} that connects the different components together. When all components were tested and the wiring was confirmed to be correct a \acrshort{pcb} was designed in Eagle, this was done in five steps.
 \begin{enumerate}[1.]
-\item The wiring diagram designed earlier in Microstation (see Figure \ref{fig:arduinomicrostation}) was converted to a schematic in Eagle. The schematic determines how the different components is connected to each other. Figure 
+\item The wiring diagram designed earlier in Microstation (see Figure \ref{fig:arduinomicrostation}) was converted to a schematic in Eagle. The schematic determines how the different components are connected to each other. Figure 
 %\ref{pcbschematic} 
 illustrates the schematic design.
 \item From the schematic a board is created in Eagle. The board file determines the layout, how the different components and wires should be printed on the finished \acrshort{pcb}. The board was designed in such order that it could be placed right on top of the Arduino. Figure 
 %\ref{pcbboard} 
 illustrates the schematic design.
-\item When the \acrshort{pcb} design was finished in Eagle, the Eagle files was converted to Gerber files. The Gerber files is responsible for how the board should be printed, and is an instruction for the \acrshort{pcb} printer.
-\item The Gerber files was sent to Elprolab who printed the \acrshort{pcb}.
-\item Every component was then soldered onto the \acrshort{pcb}, this was done manually at the cybernetics workshop since it has good equipment and safe environment with sufficient ventilation.
+\item When the \acrshort{pcb} design was finished in Eagle, the Eagle files was converted to Gerber files. The Gerber files give instruction to the \acrshort{pcb} printer for how the board should be printed.
+\item The Gerber files was sent to Elprolab, who printed the \acrshort{pcb}.
+\item Every component was soldered onto the \acrshort{pcb}, this was done manually at the cybernetics workshop since it has the proper equipment and safe environment with sufficient ventilation.
 \end{enumerate}
