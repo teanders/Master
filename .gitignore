@@ -17,3 +17,5 @@ main.fdb_latexmk
 main.run.xml
 sublimeproject.sublime-project
 sublimeproject.sublime-workspace
+Chapters/glossary.tex
+refs.bib
