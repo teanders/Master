@@ -1,6 +1,9 @@
 %\floatstyle{boxed} 
 \definecolor{headercolor}{gray}{0.45}
 \definecolor{gray75}{gray}{0.75}
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkerred}{rgb}{0.31,0,0}
+
 \restylefloat{figure}
 
 \renewcommand*\contentsname{Table of Contents}
@@ -37,3 +40,24 @@
 
 \titleformat{\chapter}{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}                     % Hvordan kapittel ser ut
 \titlespacing*{\subsubsection}{0pt}{10pt}{3pt}
+
+\sectionfont{\color{darkred}}
+\subsectionfont{\color{darkerred}}
+\subsubsectionfont{\color{darkerred}}
+
+
+\newcommand{\minisection}[1]{
+    \par\vspace{3pt}
+    {\color{darkerred}\textit{#1}}
+    \par\vspace{-3pt}
+}
+
+
+\makeatletter
+\titleformat{\part}[display]
+  {\normalfont\filcenter\scshape\thispagestyle{empty}}{}{0pt}{
+  \Huge{\partname~\thepart:}
+  {\linebreak}
+  \huge\color{darkred}
+  }
+\makeatother
