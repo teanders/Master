@@ -1,15 +1,36 @@
 \section{System Flow}
-\subsubsection{Application}
-\mabox{.6}{Results/UML-Package-Application}{UML of ``Application''-package}{fig:umlapplication}
-\task{For further details about the routines within the classes, see APPENDIX JAVADOC}
-Figure \ref{fig:umlapplication} shows the \acrfull{uml} diagram of the ``Application'' package. As seen in the figure, the package consists of the three classes ``Application'', ``RobotController'' and ``Installer''.
+%\subsubsection{Application}
+%\task{For further details about the routines within the classes, see APPENDIX JAVADOC}
+%Figure \ref{fig:umlapplication} shows the \acrfull{uml} diagram of the ``Application'' package. As seen in the figure, the package consists of %the three classes ``Application'', ``RobotController'' and ``Installer''.
 
-\textit{Installer}
+%\textit{Installer}
 
-The ``Installer'' class' static method ``generateSystemDependantLibraries'' generates and moves libraries that are necessary for the computer to run the application to the root folder of the application. Since the software uses serial communication, some library files (``.dll''(Windows), ``.jnilib''(Mac OS)) has to be present to for instance be able to open and close COM-ports. 
+%The ``Installer'' class' static method ``generateSystemDependantLibraries'' generates and moves libraries that are necessary for the computer to run the application to the root folder of the application. Since the software uses serial communication, some library files (``.dll''(Windows), ``.jnilib''(Mac OS)) has to be present to for instance be able to open and close COM-ports. 
 
+%\mabox{.6}{Results/UML-Package-Application}{UML of ``Application''-package}{fig:umlapplication}
+%\mabox{.6}{Results/UML-Package-Communication}{UML of ``Communication''-package}{fig:umlcommunication}
+%\mabox{.6}{Results/UML-Package-Robot}{UML of ``Robot''-package}{fig:umlrobot}
+%\mabox{.6}{Results/UML-Package-GUI}{UML of ``GUI''-package}{fig:umlgui}
+%\mabox{1}{Results/UML}{UML of ``SSNAR''}{fig:uml}
 
-\mabox{.6}{Results/UML-Package-Communication}{UML of ``Communication''-package}{fig:umlcommunication}
-\mabox{.6}{Results/UML-Package-Robot}{UML of ``Robot''-package}{fig:umlrobot}
-\mabox{.6}{Results/UML-Package-GUI}{UML of ``GUI''-package}{fig:umlgui}
-\mabox{1}{Results/UML}{UML of ``SSNAR''}{fig:uml}
+To better give an insight of how the system works, the following cases demonstrates how the system flow works during runtime. For more detailed information regarding the functionality of the system, please refer to APPENDIX UML and APPENDIX JAVADOC \task{appendix yes}.
+
+\minisection{Case 1: ``Update message'' received}
+\begin{itemize}
+    \item When the nRF51-server dongle receives a message from a connected robot, it writes it to the connected COM-port.
+    \item The class SerialCommunication reads the in-stream, converts the received Bytes into Strings and forwards them to the Inbox class.
+    \item The Inbox class simply holds a ``Received message'' list.
+    \item InboxReader retrieves message batches from Inbox and merges them into complete messages. Furthermore, InboxReader uses MessageHandler to parse the complete message and extracts information about ``Sender ID'', ``Message type'', and the message specific information. Finally, the information retrieved gets passed into RobotController.
+    \item RobotController adds the update values as Measurements into the related Robot object.
+\end{itemize}
+
+\minisection{Case 2: Scanning after robots}
+\begin{itemize}
+    \item When the user clicks the ``Connect robots'' button in the \acrshort{gui}, the MainGUI class creates a ConnectRobotsGUI object which handles the connection routines.
+    \item ConnectRobotsGUI invokes a scan through a method call for the Application.startScan().
+    \item Application uses Communication to set the nRF51-server dongle to command mode and sending a ``scan'' command to the dongle.
+    \item After 1 second the scan is stopped in the same way it was started, and a ``list'' command is sent to the dongle.
+    \item When the list of found devices is returned, the in-stream from the nRF51 dongle at the COM-port is handled by SerialCommunication and Inbox the same way as described in ``Case 1''.
+    \item InboxReader interprets the message content (robot IDs and robot names) and passes the found robots to RobotController.
+    \item RobotController lists the discovered devices in an observable ArrayList, which updates the ``Found robots'' in the ConnectRobotsGUI.
+\end{itemize}
