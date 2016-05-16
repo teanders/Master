@@ -1,10 +1,11 @@
+%Grammarly
 \subsection{Concurrent Programming}
 \label{sec:concurrentprog}
-A concurrent program consists of several streams of operations that may execute concurrently. The program is built in a way that the streams executes at the same time and they can communicate with one another \cite{cartwright2000}.
+A concurrent programme consists of several streams of operations that may execute concurrently. The programme is built in a way that the streams execute at the same time and they can communicate with one another \cite{cartwright2000}.
 
 \subsubsection{Threading}
 \label{sec:threading}
-Each stream of instruction in a program is called a \textit{Thread}. If a multi-threaded application is running, one of the threads may override the other threads in a way that blocks the others. This is called \textit{starving}. To prevent starving (the Java language does not guarantee this), most \acrshort{jvm} provides fairness allowing all of the threads to execute their tasks \cite{cartwright2000}.
+Each stream of instruction in a programme is called a \textit{Thread}. If a multi-threaded application is running, one of the threads may override the other threads in a way that blocks the others. This is called \textit{starving}. To prevent starving (the Java language does not guarantee this), most \acrshort{jvm} provides fairness allowing all of the threads to execute their tasks \cite{cartwright2000}.
 
 \subsubsection{Shared Objects}
 \label{sec:sharedobj}
@@ -13,14 +14,14 @@ According to ``The little book of semaphores''\cite{downey2008}, objects and var
 \textbf{Race Conditions}
 \label{sec:raisedcond}
 
-\textit{Race conditions} happens when several threads tries to write to/read from the same variable or object at the same time. The resulting outcome depends on the order of execution, and in worst case the result may be erroneous \cite{stevecarr2003}. 
+\textit{Race conditions} happens when several threads try to write to/read from the same variable or object at the same time. The resulting outcome depends on the order of execution, and in the worst case, the result may be erroneous \cite{stevecarr2003}. 
 
 \textbf{Synchronization}
 \label{sec:synchronization}
 
-The main preventing action in Java to avoid race conditions is object locking. By \textit{synchronizing} a block of code or a whole method, the object lock key will be acquired by the first thread that enters the code block, while the other threads have to wait. This way one can prevent that several threads accesses variables or such at the same time \cite{cartwright2000}.
+The main preventing action in Java to avoid race conditions is object locking. By \textit{synchronizing} a block of code or a whole method, the object lock key will be acquired by the first thread that enters the code block, while the other threads have to wait. This way one can prevent that several threads access variables at the same time \cite{cartwright2000}.
 
 \textbf{Deadlock}
 \label{sec:deadlock}
 
-\textit{Deadlock} is the ultimate form for starvation (see Section \ref{sec:threading}). Deadlock happens when two ore more threads are waiting on a condition that cannot be satisfied \cite{sunmicrosystems2005}. The most classical problem to illustrate how deadlock happens, is ``The Dining Philosophers Problem''\cite{cartwright2000v2}. In the philosophers problem, no philosopher can eat unless he has two forks, and since there is not enough forks at the table for them to acquire, all of the philosophers starves to death.
+\textit{Deadlock} is the ultimate form for starvation (see Section \ref{sec:threading}). Deadlock happens when two or more threads are waiting on a condition that cannot be satisfied \cite{sunmicrosystems2005}. The most classical problem to illustrate how deadlock happens is ``The Dining Philosophers Problem''\cite{cartwright2000v2}. In the philosophers problem, no philosopher can eat unless he has two forks, and since there are not enough forks at the table for them to acquire, all of the philosophers starves to death.
