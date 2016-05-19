@@ -13,7 +13,7 @@ To sense the gap, the group studied earlier projects to get an insight in the pr
 \end{itemize}
 
 \subsection{Understand and refine the problem}
-Further, the group defined the problems of the existing solutions and its shortcomings. ``System for Autonomous Self-Navigating Robots'' is a project that has been performed several times, but the system is no longer working. This year's thesis main objective is to produce a better solution that will last significantly longer than the previous solutions. The group explored the existing solution to understand why it did not work as expected and tried to connect the findings to the three criterion defined in the ``Sense the gap'' phase.
+Further, the group defined the problems of the existing solutions and its shortcomings. ``System for Autonomous Self-Navigating Robots'' is a project that has been performed several times, but the system is no longer working. This years thesis main objective is to produce a better solution that will last significantly longer than the previous solutions. The group explored the existing solution to understand why it did not work as expected and tried to connect the findings to the three criterion defined in the ``Sense the gap'' phase.
 
 \minisection{Reliability}
 The existing solution was not perfect regarding reliability. During testing of the system the user often experienced that the actions not always led to the expected behaviour. Many of the buttons functionality were removed, but the buttons were still present in the \acrshort{gui}. With this in mind, the group designed an interface that consisted of a minimal set of functionality that met the requirements for functionality, as well as removing redundant components.
@@ -73,36 +73,36 @@ The suggestion shown in Figure \ref{fig:gui3} does not have a start-up screen. T
 \label{sec:evalandfeedback}
 To evaluate the different suggestions, the group printed the \acrshort{gui} suggestions on sheets and arranged usability testing to get user-experienced feedback. The different screens of the interface were covered using sticky notes, but these were removed as the test person ``navigated'' through the \acrshort{gui}. The test person was given some pre-defined tasks to perform, and during the interaction he/she was not receiving any help. After performing different tasks, the person was handed an evaluation sheet, where he/she should evaluate each part of the \acrshort{gui}.
 
-The results from the user testing are shown in Figure \ref{fig:midlertidig}. In addition to rate the different suggestions, the test persons got to comment them as well. The feedback is listed in table \ref{tab:guifeedback}
+The results from the user testing are shown in table \ref{tab:guifeedback}. In addition to rate the different suggestions, the test persons got to comment them as well.
 
 \begin{table}[ht]
 \begin{center}
-\begin{tabular}{|l | l|} 
+\begin{tabular}{|l|l|l|} 
 \hline
-Suggestion  &   Comments \\
+Suggestion  &   Comments & Rating \\
  \hline
-1           &   - A solution using panes to represent each robots gets complex if\\
-            &   many robots are connected. \\
-            &   - It is cumbersome to have to switch between panes to get info\\
-            &   about different robots. \\
+1           &   - A solution using panes to represent each robots gets complex if & 2\\
+            &   many robots are connected. & \\
+            &   - It is cumbersome to have to switch between panes to get info &\\
+            &   about different robots. & \\
 \hline
-2           &   - The main screen presents almost too much information. \\
-            &   - Choosing modes before entering the main screen can help\\
-            &   prevent user errors. \\
+2           &   - The main screen presents almost too much information.  & 3\\
+            &   - Choosing modes before entering the main screen can help &\\
+            &   prevent user errors.  &\\
 \hline
-3           &   - It is straightforward to present the information about the\\
-            &   respective robots in a separate screen. \\
-            &   - Less is more. \\
+3           &   - It is straightforward to present the information about the & 1\\
+            &   respective robots in a separate screen.  &\\
+            &   - Less is more.  &\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Criterias for functionality in the \acrshort{gui}}
+\caption{User feedback regarding GUI Design}
 \label{tab:guifeedback}
 \end{table}
-
-\mabox{0.8}{Other/midlertidig.png}{MIDLERTIDIG}{fig:midlertidig}
 
 
 \subsection{Select plan}
 \label{sec:selectplan}
 This phase focuses on choosing a plan for the design, based on the result from the ``Evaluation and feedback'' phase. The group discussed the results and evaluated the suggestions based on their experience, and selected the plan to go on with.
+
+The design that was chosen consists of functionality and design parts from all of the three suggestions. The mode selection from suggestion 1 and 2, see Figure \ref{fig:gui2}, was selected to prevent user errors that may have occurred if the selection was present in the main window. The three window solution in suggestion 3 laid the basis for the design of the main windows in the application. Some minor changes, such as moving the ``Start'' and ``Stop'' buttons and removing the ``Local map'' as well as adding a menu bar at the top of the main window were made.
