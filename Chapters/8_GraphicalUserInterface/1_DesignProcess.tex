@@ -1,56 +1,33 @@
 \section{Design Process}
 \label{sec:hcimethod}
-The design process was divided in 5 phases, and each phase dealt with the various key elements in a design process.
+\textit{The design process was divided into 5 phases, and each phase dealt with the various key elements in a design process.}
 
 \subsection{Sense the gap}
 \label{sec:sensethegap}
-To sense the gap, the group studied earlier projects to get an insight in the previous solutions to the problem. The group discovered several shortcomings in the existing solution, and got an understanding of the gap in the user experience.
-
-\subsection{Understand and refine the problem}
-Further, the group defined the problems of the existing solutions and its shortcomings. The group listed some essential points of improvements, and a specification containing focus points within usability and performance was made.
-
-\subsection{Explore}
-\label{sec:explore}
-Based on the information in the specification, the exploration phase started. The group members developed various suggestions for the \acrshort{gui} with specification as basis, but also took the Gestalt principles (section \ref{sec:gestaltprinciples}) and Schneidermans 8 golden rules (section \ref{sec:schneiderman}) into account.
-
-\subsection{Evaluation and feedback}
-\label{sec:evalandfeedback}
-To evaluate the different suggestions, the group printed the \acrshort{gui} suggestions on sheets and arranged usability testing to get user-experienced feedback. The different screens of the interface were covered using sticky notes, but these were removed as the test person ``navigated'' through the \acrshort{gui}. The test person was given some pre-defined tasks to perform, and during the interaction he/she was not receiving any help. After performing different tasks, the person was handed an evaluation sheet, where he/she should evaluate each part of the \acrshort{gui}.
-
-\subsection{Select plan}
-\label{sec:selectplan}
-This phase focuses on choosing a plan for the design, based on the result from the ``Evaluation and feedback'' phase. The group discussed the results and evaluated the suggestions based on their experience, and selected the plan to go on with.
-
-
-\section{Design Process Results changechange}
-\subsection{Sense the gap}
-As mentioned in section \ref{sec:sensethegap}, the group discovered shortcomings in the existing solution. The group therefore drafted a list of criterias (see list below) that the final product should meet, and it laid the foundation for further process. The new design should:
+To sense the gap, the group studied earlier projects to get an insight in the previous solutions to the problem. The group discovered several shortcomings in the existing solution and got an understanding of the gap in the user experience. The group draughted a list of criterion (see list below) that the final product should meet, and it laid the foundation for further process. The new design should:
 
 \begin{itemize}
     \item Be reliable.
     \item Be easy to use.
-    \item Minimize the likelihood of user error.
+    \item Minimise the likelihood of user error.
 \end{itemize}
 
-
 \subsection{Understand and refine the problem}
-``System for Autonomous Self-Navigating Robots'' is a project that has been performed several times, but the system is no longer working. This years thesis main objective is to produce a better solution that will last significantly longer than the previous solutions.
+Further, the group defined the problems of the existing solutions and its shortcomings. ``System for Autonomous Self-Navigating Robots'' is a project that has been performed several times, but the system is no longer working. This year's thesis main objective is to produce a better solution that will last significantly longer than the previous solutions. The group explored the existing solution to understand why it did not work as expected and tried to connect the findings to the three criterion defined in the ``Sense the gap'' phase.
 
-The group explored the existing solution to understand why it didn't work as expected, and tried to connect the findings to the three criterias defined in the ``Sense the gap'' phase.
+\minisection{Reliability}
+The existing solution was not perfect regarding reliability. During testing of the system the user often experienced that the actions not always led to the expected behaviour. Many of the buttons functionality were removed, but the buttons were still present in the \acrshort{gui}. With this in mind, the group designed an interface that consisted of a minimal set of functionality that met the requirements for functionality, as well as removing redundant components.
 
-\textbf{Reliability}
+\minisection{Usability}
+The existing solution had a \acrshort{gui} that contained lots of information and functionality. Many of the buttons were connected without any information about how they were related, some of the buttons were representing the same actions, and some buttons did not work at all. The buttons together with many boxes presenting information, made the user interface complex and bad in terms of usability. The group used the previous solution to define guidelines for how the new system should be considering usability.
 
-The existing solution was not perfect in terms of reliability. During testing of the system the user often experienced that the actions not always led to the expected behaviour. Many of the buttons functionality were removed, but the buttons were still present in the \acrshort{gui}. With this in mind the group designed an interface that consisted of a minimal set of functionality that met the requirements for functionality, as well as removing redundant components.
-
-\textbf{Usability}
-
-The existing solution had a \acrshort{gui} that contained lots of information and functionality. Many of the buttons were connected without any information about how they were connected, some of the buttons were representing the same actions, and some buttons did not work at all. the buttons together with many boxes presenting information, made the user interface complex and bad in terms of usability. The group used the previous solution to define guidelines for how the new system should be in terms of usability.
-
-\textbf{Minimize the likelihood of user error}
-
-Putting all of the functionality into the same screen makes it more likely for the user to make errors. By dividing functionality into sections, making the program as a sequence of actions, prevents user errors and makes the system appear more usable and reliable for the user. These criterias laid the basis for this years solution. 
+\minisection{Minimize the likelihood of user error}
+Putting all of the functionality on the same screen makes it more likely for the user to make mistakes. By dividing functionality into sections, making the program as a sequence of actions prevents user errors and makes the system appear more usable and reliable for the user. This criterion laid the basis for this years solution. 
 
 \subsection{Explore}
+\label{sec:explore}
+Based on the information in the specification, the exploration phase started. The group members developed various suggestions for the \acrshort{gui} with the specification as basis, but also took the Gestalt principles (section \ref{sec:gestaltprinciples}) and Schneidermans 8 golden rules (section \ref{sec:schneiderman}) into account.
+
 Prior to developing design solutions the group made a list consisting all of the functionality that the \acrshort{gui} should provide (see Table \ref{tab:guicriterias}).
 \begin{table}[ht]
 \begin{center}
@@ -80,23 +57,23 @@ Prior to developing design solutions the group made a list consisting all of the
 \label{tab:guicriterias}
 \end{table}
 
-\textbf{\acrlong{gui}, suggestion 1}
-
+\minisection{\acrlong{gui}, suggestion 1}
 \mabox{1}{Results/GUI1.PNG}{\acrlong{gui}, suggestion 1}{fig:gui1}
-The suggestion shown in Figure \ref{fig:gui1} has a start-up screen where the user selects either to run the simulator or to run the system in the real world. Choosing the mode brings the user to the main screen. In the main screen the information about the robot is presented as well as a local/world map toggled by a radio button group. To add more robots the user has to click on the the plus sign (new pane), and a pop-up present available robots to connect to.
+The suggestion in Figure \ref{fig:gui1}, has a start-up screen where the user selects either to run the simulator or to run the system in the real world. Choosing the mode brings the user to the main screen. In the main screen, the information about the robot is presented as well as a local/world map toggled by a radio button group. To add more robots the user has to click on the plus sign (new pane), and a pop-up window presents available robots.
 
-\textbf{\acrlong{gui}, suggestion 2}
-
+\minisection{\acrlong{gui}, suggestion 2}
 \mabox{1}{Results/GUI2.PNG}{\acrlong{gui}, suggestion 2}{fig:gui2}
-The suggestion shown in Figure \ref{fig:gui2} has, like the fist suggestion, a start-up screen that present two different modes (simulator and real world). Choosing the mode brings the user to a new dialog box where the user is presented with two different options: manual drive or autonomous. Clicking on the desired mode brings the user to the main screen. The main screen consists of a horizontal list of the connected robots and their information, as well as a map that can switch between different modes. To add a robot the user has to click "Add robot", and he/she is then presented available robots in a pop-up.
+The proposal that is shown in Figure \ref{fig:gui2} has, like the fist suggestion, a start-up screen that present two different modes (simulator and real world). Choosing the mode brings the user to a new dialogue box where the user is presented with two different options: manual drive or autonomous. Clicking on the desired mode brings the user to the main screen. The main screen consists of a horizontal list of the connected robots and their information, as well as a map that can switch between different modes. To add a robot the user has to click ``Add robot'', and he/she is then presented available robots in a pop-up.
 
-\textbf{\acrlong{gui}, suggestion 3}
-
+\minisection{\acrlong{gui}, suggestion 3}
 \mabox{1}{Results/GUI3.PNG}{\acrlong{gui}, suggestion 3}{fig:gui3}
-The suggestion shown in Figure \ref{fig:gui3} does not have a start-up screen. The main screen presents the two different modes in the top left corner, and the rest of the functionality will be available after selecting a mode and pressing start. Further the main screen contains a list of connected robots and a world map. Clicking ``connect to more robots'' presents a pop-up similar to the other solutions, while clicking ``more'' (buttons next to connected robots) opens the robot screen. The robot screen presents information about the spesific robot, its local map, as well as an opportunity to enter manual drive mode for the robot.
+The suggestion shown in Figure \ref{fig:gui3} does not have a start-up screen. The main screen presents the two different modes in the top left corner, and the rest of the functionality will be available after selecting a mode and pressing start. Further, the main screen contains a list of connected robots and a world map. Clicking ``connect to more robots'' presents a pop-up similar to the other solutions while clicking ``more'' (buttons next to connected robots) opens the robot screen. The robot screen presents information about the specific robot, its local map, as well as an opportunity to enter manual drive mode for the robot.
 
 \subsection{Evaluation and feedback}
-The results from the user testing is shown in Figure \ref{fig:midlertidig}. In addition to rate the different suggestions, the test persons got to comment them as well. The feedback is listed in table \ref{tab:guifeedback}
+\label{sec:evalandfeedback}
+To evaluate the different suggestions, the group printed the \acrshort{gui} suggestions on sheets and arranged usability testing to get user-experienced feedback. The different screens of the interface were covered using sticky notes, but these were removed as the test person ``navigated'' through the \acrshort{gui}. The test person was given some pre-defined tasks to perform, and during the interaction he/she was not receiving any help. After performing different tasks, the person was handed an evaluation sheet, where he/she should evaluate each part of the \acrshort{gui}.
+
+The results from the user testing are shown in Figure \ref{fig:midlertidig}. In addition to rate the different suggestions, the test persons got to comment them as well. The feedback is listed in table \ref{tab:guifeedback}
 
 \begin{table}[ht]
 \begin{center}
@@ -124,3 +101,8 @@ Suggestion  &   Comments \\
 \end{table}
 
 \mabox{0.8}{Other/midlertidig.png}{MIDLERTIDIG}{fig:midlertidig}
+
+
+\subsection{Select plan}
+\label{sec:selectplan}
+This phase focuses on choosing a plan for the design, based on the result from the ``Evaluation and feedback'' phase. The group discussed the results and evaluated the suggestions based on their experience, and selected the plan to go on with.
