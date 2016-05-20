@@ -1,18 +1,16 @@
 \section{Improving to the robot}
 \label{sec:improvements}
 
-\subsection{Designing the Motor Holder}
-The assembled robot as can be seen in Figure \ref{fig:robpremothold}, was too heavy in the center, and this led to the wheels leaning towards the chassis. As this would have influenced the performance of the robot while driving, the group decided to improve the assembled robot to neutralize the maldistribution of weight. It was decided to design and 3D-print a motor holder that should prevent the wheel angulation.
+\subsection{Designing the Motor and Axle plastic housings}
+The assembled robot as can be seen in Figure \ref{fig:robpremothold}, was too heavy in the centre, and this led to the wheels leaning towards the chassis. As this would have influenced the performance of the robot while driving, the group decided to improve the assembled robot to neutralise the maldistribution of weight. It was decided to design and 3D-print a motor holder that should prevent the wheel angulation.
 
-As SolidWorks, see Section \ref{sec:software}, is a modeling software, it was suited to use for this task. Measuring the physical robot gave an accurate basis for designing the motor holder, taking screws and nuts mounted to the chassis into account. The measurements and shapes obtained from the physical robot were modeled in SolidWorks, using one of the ``Get started'' tutorials in the software as guidance.
-\task{Skal fremgangsmåten for modelleringen beskrives enkelt og greit her (det er sikkert greit sidefyll + enkelt å skrive om)? Hvis ikke, må de skrives noen setninger til som gjør at vi kan referere til bildene (\ref{fig:mothold1} og \ref{fig:mothold2})}
+There was some problematics with PWM velocity regulation using the original wheel and motor; please refer to Ese(2016) for elaboration. The groups decided to gear down the rotation speed from the motor instead, but when doing so, the original axle got broken. As it now was needed to fix the motor by making a new axle, it was possible to build a gearing system using the same parts as is used on the Atmel robot. Using different Lego gears and bricks to gear down the rotation presented the need for an axle housing to hold the new wheel axle in place.
+
+As SolidWorks, see Section \ref{sec:software}, is a modelling software, it was suited to use for this task. Measuring the physical robot gave an accurate basis for designing the motor and axle housing, taking screws and nuts mounted to the chassis into account. The measurements and shapes obtained from the physical robot were modelled in SolidWorks, detailed schematics can be found in Appendix BLABLA \task{apendiiiix}, and was 3D-printed at the Cybernetic Mechanical Workshop at NTNU.
 
 \mabox{.5}{Methods/RobotWithoutMotorHolder.png}{Robot without improvements}{fig:robpremothold}
 
-\toBilder{Methods/MotorHolder1}{Motor holder design}{fig:mothold1}{Methods/MotorHolder2}{Motor holder design}{fig:mothold2}
-
-\subsection{Designing the Axle Holder}
-\task{Dette må skrives noe om}
+%\toBilder{Methods/MotorHolder1}{Motor holder design}{fig:mothold1}{Methods/MotorHolder2}{Motor holder design}{fig:mothold2}
 
 \subsection{Designing the Printed Circuit Board}
 Connecting wires with a breadboard is nice for prototyping, but when the robot is finished, it should have a \acrshort{pcb} that connects the different components together. When all components were tested and the wiring was confirmed to be correct a \acrshort{pcb} was designed in Eagle, this was done in five steps.
