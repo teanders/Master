@@ -1,5 +1,5 @@
 \section{Creating the Message Protocol}
-When implementing the communication between the physical robots and the server software, the groups realized the need for a general message protocol. The message protocol should be complex enough to consist of different message types, such as updates and handshakes, and variables, such as parameters for physical size, as well as being simple enough to be easy to understand and implement in software.
+When implementing the communication between the physical robots and the server software, the groups realised the need for a general message protocol. The message protocol should be complex enough to consist of different message types, such as updates and handshakes, and variables, such as parameters for physical size, as well as being simple enough to be easy to understand and implement in software.
 
 The groups sat down and discussed which types of messages the protocol should implement, and what the message types should include of parameters. The message types and parameters were listed as shown in Table \ref{tab:messprotfromrob} and Table \ref{tab:messprotfromser}:
 
@@ -7,31 +7,31 @@ The groups sat down and discussed which types of messages the protocol should im
 \begin{center}
  \begin{tabular}{|l | l|} 
  \hline
- Message type       &	Parameters \\
+ Message type       &    Parameters \\
  \hline
  \hline
  From Robot: & \\
  \hline
  Handshake          &   Message type \\
- 					&	Physical robot width and length  \\
+                     &    Physical robot width and length  \\
                     &   Tower offset from center of the robot\\
-                    &	Axle offset lengthwise \\
-                    &	Sensor offset from tower center \\
-                    &	Initial sensor heading \\
+                    &    Axle offset lengthwise \\
+                    &    Sensor offset from tower center \\
+                    &    Initial sensor heading \\
  \hline
- Update  			&   Message type \\
+ Update              &   Message type \\
                     &   Robot position (x,y) \\
                     &   Orientation \\
                     &   Tower heading \\
-                    &	Sensor values \\
+                    &    Sensor values \\
  \hline
- Status		        &   Message type \\
- 					&	Destination arrived \\
+ Status                &   Message type \\
+                     &    Destination arrived \\
                     &   Wall hit \\
  \hline
  \end{tabular}
 \end{center}
-\caption{Criterion for functionality in the \acrshort{gui}}
+\caption{Sketched list over messages from the Robot}
 \label{tab:messprotfromrob}
 \end{table}
 
@@ -44,27 +44,29 @@ The groups sat down and discussed which types of messages the protocol should im
  \hline
  From Server: & \\
  \hline
- Update  			&   Message type \\
+ Update              &   Message type \\
                     &   Orientation \\
                     &   Distance \\
  \hline
- Status		        &   Hanshake confirmed \\
+ Status                &   Hanshake confirmed \\
                     &   Pause robot \\
                     &   Unpause robot \\
                     &   Robot finished \\
  \hline
 \end{tabular}
 \end{center}
-\caption{Criterion for functionality in the \acrshort{gui}}
+\caption{Sketched list over messages from the Server}
 \label{tab:messprotfromser}
 \end{table}
 
-At first the group developed a message protocol using JSON-structure. The benefit of using JSON to structure a message protocol, is that it is easy to understand just by reading the message as well as the order of the parameters does not have to be specified. The update message from server in JSON-structure was defined as:
+At first, the group developed a message protocol using JSON-structure. The benefit of using JSON to structure a message protocol is that it is easy to understand just by reading the message as well as the order of the parameters does not have to be specified. The update message from server in JSON-structure was defined as:
 
 \{``Update'':[\{``Orientation'':``60''\},\{``Distance'':``100''\}]\}
 
-Due to some problems with the nRF51-dongle, see elaboration in Section \ref{sec:wirelesscomresult}, the group converted the message protocol from JSON-structure to a more compact designed structure. The update message was then defined as:
+Due to some problems with the nRF51-server software not being able to receive messages with a size greater than 60 Bytes, and the nrf51-peripheral not being able to receive messages greater than 20 Bytes, the group converted the message protocol from JSON-structure to a more compact designed structure. The update message (from server) was then defined as:
 
 \{U,60,100\}
 
-The remaining message types were defined in the same manner.
+The remaining message types were defined in the same manner. Figure \ref{fig:messprot}, and Appendix BLABLA, presents all message types and parameters implemented in the message protocol. As can be seen, some of the message content is adjusted from what was originally planned in Table \ref{tab:messprotfromrob} and \ref{tab:messprotfromser}. \task{appendixxxx}
+
+\mabox{1}{Results/Meldingsprotokoll}{Message Protocol}{fig:messprot}
