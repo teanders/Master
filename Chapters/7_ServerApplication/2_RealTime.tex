@@ -1,6 +1,6 @@
-\section{Designing the Real-Time system flow}
-The purpose of this year's project was to make the robots able to drive and scan in real-time, not sequentially drive-stop-scan. Therefore, it was important that the server application from the first line of code were developed regarding concurrent programming.
+\section{Designing the Real-Time System Flow}
+The purpose of this year's project was to make the robots able to drive and scan in real-time, not sequentially drive-stop-scan. Therefore, it was important that the server application from the first line of code were developed in terms of concurrent programming.
 
 The group sat down with the list of modules and decided which modules that should consist of threads. As seen in Figure \ref{fig:brainstorming}, the modules containing threads are marked with a curly sign at the left of the module. The intention of defining which modules that should include thread handling in the early phase of the development was contributing to avoid thread handling issues like race conditions and deadlocks, as described in Section \ref{sec:concurrentprog}.
 
-In the server application, some of the classes were defined as shared objects. For example, the class that should contain all incoming messages had to both provide functionality for putting messages into the inbox, as well as being read from by a ``mailbox reader''. To prevent race conditions in the shared objects and variables the code blocks were synchronized, such that only one thread could access them at the time.
+In the server application, some of the classes were defined as shared objects. For example, the class that should contain all incoming messages had to both provide functionality for putting messages into the inbox, as well as being read from by a ``mailbox reader''. To prevent race conditions in the shared objects and variables the code blocks were synchronised, such that only one thread could access them at the time.
