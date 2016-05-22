@@ -1,24 +1,99 @@
 \chapter{Material}
-
+\textit{The following sections provides a list and describes the software and hardware components used in this project}
 \section{Software}
 \label{sec:software}
 \begin{itemize}
-    \item \textbf{Matlab} (version R2015a), described in Section \ref{sec:matlab}.
-    \item \textbf{Atmel Studio} (version 7) is an integrated development platform for developing Atmel-baced microcontroller applications, developed by Atmel Corporation. The environment provides write, build and debug-functionality for application written in C/C$++$ or assembly code. Windows is the supported operating system \cite{atmel}. 
     \item \textbf{Arduino IDE}, described in Section \ref{sec:progplatarduino}.
-    \item \textbf{Eagle} (version 7.5), Easy Applicable Graphical Layout Editor, is a \acrfull{pcb} design software. It provides three modules, where the user can design the schematics, edit the board layout and route the wires manually/automatically. The software is cross-platform, and is available both for Windows, Linux and Mac \cite{eagle}.
-    \item \textbf{SolidWorks} is a modelling \acrfull{cad} software, developed by Dassault Systèmes. It provides functionality for design, simulation and publishing of 3D-modelled figures. Windows is the supported operating system \cite{solidworks}.
-    \item \textbf{MicroStation}
-    \item \textbf{nrfGoStudio}
-    \item \textbf{Keil  µvison 5}
-    \item \textbf{Netbeans}
+    \item \textbf{Atmel Studio} (version 7) is an integrated development platform for developing Atmel-based microcontroller applications, developed by Atmel Corporation. The environment provides write, build and debug functionality for an application written in C/C$++$ or assembly code. Windows is the supported operating system \cite{atmel}. 
+    \item \textbf{Eagle} (version 7.5), Easy Applicable Graphical Layout Editor, is a \acrfull{pcb} design software. It provides three modules, where the user can design the schematics, edit the board layout and route the wires manually/automatically. The software is cross-platform and is available both for Windows, Linux and Mac \cite{eagle}.
+    \item \textbf{Keil µVison 5} combines source code editing, program debugging, project management and build facilities in one environment. The software provides functionality for building and programming device peripherals \cite{uvision}. µVision can only be installed on Windows.
+    \item \textbf{Matlab} (version R2015a), described in Section \ref{sec:matlab}.
+    \item \textbf{Microsoft Project} is a project management tool for Windows that let the users plan the project progress in detail. It provides information about scheduled workloads for all the participants and helps to keep progress in the project. Through the software, the team can generate useful illustrations like Gantt-diagrams to get a clear presentation of the project development \cite{msproject}. 
+    \item \textbf{MicroStation} is a \acrfull{cad} software for producing drawings and documentation, developed by Bentley. The software can e.g. be used to make wiring diagrams for embedded systems \cite{microstation}. Version 8.11 is used in this thesis. MicroStation can only be installed on a Windows computer.
+    \item \textbf{NetBeans} is a tool for software development. Installing different plugins let the user write programs in Java, JavaScript, HTML5, C/C$++$ and more. The software is cross-platform and is available for Windows, Linux and Mac and the latest version available is NetBeans IDE 8.1 \cite{netbeans}.
+    \item \textbf{nrfGoStudio} is a Windows application, developed by Nordic Semiconductor, which eases development when using the nRFgo Development kit. The software provides a visual editor and functionality for configuring and programming nRF51-devices \cite{nrfgo}.
+    \item \textbf{SolidWorks} is a modelling \acrshort{cad} software, developed by Dassault Systèmes. It provides functionality for design, simulation and publishing of 3D-modelled figures. Windows is the supported operating system \cite{solidworks}.
+    \item \textbf{Source Tree} is a free client for Git and Mercurial projects. It provides a straightforward graphical user interface and makes it easy to manage projects \cite{sourcetree}. It can be installed on both Mac and Windows.
 \end{itemize}
-
-\task{Skriv om resterende programmvare}
-
+\newpage
 \section{Hardware}
 \label{sec:hardware}
 List of components:
+\task{Få på kilder på bildene! Pris på nRF51?}
+\navn{Arduino Mega 2560 R3}
+\begin{material}{Material/Arduino.jpg}{Arduino Mega}
+\item ATmega2560 microcontroller
+\item Input voltage - 7-12V
+\item 54 Digital I/O Pins (14 \acrfull{pwm} outputs)
+\item 16 Analog Inputs
+\item 256k Flash Memory
+\item 16Mhz Clock Speed
+\item 45.95 USD
+\end{material}
+
+\navn{Bi-Directional Logic Level Converter}
+\begin{material}{Material/Levelconverter.jpg}{Level converter}
+\item 5V signals to 3.3V 
+\item 3.3V signals to 5V
+\item 4 pins on the high side to 4 pins on the low side
+\item 2.95 USD
+\end{material}
+
+\newpage
+\navn{Dual Motor Driver}
+\begin{material}{Material/Motorcontroller.jpg}{Motorcontroller}
+\item Dual bidirectional motor driver
+\item On-board user-accessible 5V regulator 
+\item Enable and Direction Control Pins
+\item 34.95 USD
+\end{material}
+
+\navn{IMU, 6 Degrees of Freedom}
+\begin{material}{Material/IMU.jpg}{IMU}
+\item Low power consumption
+\item Smart FIFO up to 8 kbyte buffer
+\item Featuring both $I^2C$ and $SPI$
+\item 3.3V device
+\item 19.95 USD
+\end{material}
+
+\navn{Infrared Proximity Sensor - Sharp }
+\begin{material}{Material/Sharp.jpg}{Infrared Sensor}
+\item 4x infrared sensors
+\item Range: 10-80 cm
+\item 13.25 USD each
+\end{material}
+
+\newpage
+\navn{Infrared Sensor Jumper Wire - 3-Pin JST}
+\begin{material}{Material/Jumperwire.jpg}{Infrared Sensor Jumper Wire}
+\item 4x Infrared Sensor Jumper Wires
+\item Three pin JST connector
+\item Connects to Sharp sensors
+\item 1.43 USD each
+\end{material}
+
+\navn{Metal Ball caster}
+\begin{material}{Material/BallCaster.jpg}{Ball caster}
+\item 3/8'' metal ball
+\item 2.95 USD
+\end{material}
+
+\navn{Micro servo for IR tower}
+\begin{material}{Material/Servo.jpg}{Micro servo}
+\item Rotation: 180\degree
+\item Metal Gears
+\item 28.8 x 13.8 x 30.2mm
+\item 10.95 USD
+\end{material}
+
+\newpage
+\navn{Nordic Semiconductor nRF51 Dongle}
+\begin{material}{Material/Nrf51dongle.JPG}{nRF51 Dongle}
+\item Supports Bluetooth Smart, ANT and 2.4GHz
+\item Virtual COM port interface through UART
+\item 6 solder pads for GPIO/interface connections
+\end{material}
 
 \navn{Shadow Chassis}
 \begin{material}{Material/Chassis.jpg}{Chassis}
@@ -38,78 +113,4 @@ List of components:
 \item 19.95 USD
 \end{material}
 
-\navn{Dual Motor Driver}
-\begin{material}{Material/Motorcontroller.jpg}{Motorcontroller}
-\item Dual bidirectional motor driver
-\item On-board user-accessible 5V regulator 
-\item Enable and Direction Control Pins
-\item 34.95 USD
-\end{material}
-
-\navn{Arduino Mega 2560 R3}
-\begin{material}{Material/Arduino.jpg}{Arduino Mega}
-\item ATmega2560 microcontroller
-\item Input voltage - 7-12V
-\item 54 Digital I/O Pins (14 PWM outputs)
-\item 16 Analog Inputs
-\item 256k Flash Memory
-\item 16Mhz Clock Speed
-\item 45.95 USD
-\end{material}
-
-\navn{Micro servo for IR tower}
-\begin{material}{Material/Servo.jpg}{Micro servo}
-\item Rotation: 180\degree
-\item Metal Gears
-\item 28.8 x 13.8 x 30.2mm
-\item 10.95 USD
-\end{material}
-
-\newpage
-\navn{Infrared Proximity Sensor - Sharp }
-\begin{material}{Material/Sharp.jpg}{Infrared Sensor}
-\item 4x infrared sensors
-\item 10cm to 80cm
-\item 13.25 USD each
-\end{material}
-
-\navn{Infrared Sensor Jumper Wire - 3-Pin JST}
-\begin{material}{Material/Jumperwire.jpg}{Infrared Sensor Jumper Wire}
-\item 4x Infrared Sensor Jumper Wires
-\item Three pin JST connector
-\item Connects to Sharp sensors
-\item 1.43 USD each
-\end{material}
-
-\navn{Metal Ball caster}
-\begin{material}{Material/BallCaster.jpg}{Ball caster}
-\item 3/8'' metal ball
-\item 2.95 USD
-\end{material}
-
-\newpage
-\navn{6 Degrees of Freedom, IMU}
-\begin{material}{Material/IMU.jpg}{IMU}
-\item Low power consumption
-\item Smart FIFO up to 8 kbyte buffer
-\item Featuring both $I^2C$ and $SPI$
-\item 3.3V device
-\item 19.95 USD
-\end{material}
-
-\navn{Bi-Directional Logic Level Converter}
-\begin{material}{Material/Levelconverter.jpg}{Level converter}
-\item 5V signals to 3.3V 
-\item 3.3V signals to 5V
-\item 4 pins on the high side to 4 pins on the low side
-\item 2.95 USD
-\end{material}
-
-\navn{Nordic Semiconductor nRF51 Dongle}
-\begin{material}{Material/Nrf51dongle.JPG}{nRF51 Dongle}
-\item Supports Bluetooth Smart, ANT and 2.4GHz
-\item Virtual COM port interface through UART
-\item 6 solder pads for GPIO/interface connections
-\end{material}
-
-In addition some extra parts to modify the chassis were made in the schools mechanical workshop.
+Also, some extra parts to modify the chassis were made in the schools Cybernetics Mechanical Workshop.
