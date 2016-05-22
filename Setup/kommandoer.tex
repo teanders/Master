@@ -129,3 +129,10 @@
 \newcommand{\HRule}{\rule{0.7\linewidth}{0.5mm}}
 
 
+\newcounter{teAppendixCounter}
+
+\newcommand{\teAppendix}[2]{
+    \refstepcounter{teAppendixCounter}\label{app:#2} Appendix \theteAppendixCounter: \hspace{2pt} #1 
+
+    \vspace*{-5pt}
+}

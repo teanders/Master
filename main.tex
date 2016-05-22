@@ -6,7 +6,9 @@
 \input{Chapters/glossary}
 \begin{document}
 
-%% FRAMSIDE!
+
+
+%% FRAMSIDE! Generert av Daiiim
 
 \input{Chapters/0_Preamble/main}
 %\task{Sjekk opp rundt marger, font, b5/a4 osv}
@@ -25,13 +27,15 @@
 \input{Chapters/10_DiscussionConclusion/main}
 \input{Chapters/11_FutureWork/main}
 
-\listoftodos[Notes]
-\printglossary
+\listoftodos[Notes]  					% Skal bort
+\printglossary		 					% Kommer, greier ikke å generere i Sublime, må bruke share latex
 \addcontentsline{toc}{chapter}{Glossary}
-%\bibliographystyle{apa}
+%\bibliographystyle{apa\}				% apa = akademisk, men om vi kommenterer det ut blir det "engineering way", noe som er lettere å forstå
 
 \addcontentsline{toc}{chapter}{\bibname}
 %\bibliography{refs}
 \printbibliography
+
+\input{Appendix/main}
 
 \end{document}
