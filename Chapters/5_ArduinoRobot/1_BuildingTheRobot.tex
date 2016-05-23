@@ -1,8 +1,9 @@
 \section{Designing the robot}
+\label{sec:robotdesign}
 The robot design was planned out during the first week of the project. During this week, the group discussed which parts were necessary to build a robot that met our goal. The entire robot was planned out before ordering any parts to make sure that there were no unnecessary purchases. It was important to order all parts as soon as possible as shipping time can be significant when ordering from the US.
 
-\subsubsection{Acquiring materials}
-The robot should be able to charge itself when it has the low battery, and as there is currently only one charger that every robot shares, the new robot should be able to use that charger. Because of this, the new robot has an 11.1V lithium battery which can charge itself using the same charger. The battery was bought from a Norwegian vendor called Elfa Distrelec\cite{elfa} since the price of lithium batteries was the same as ordering from outside Norway.
+\subsection{Acquiring materials}
+The robot should be able to charge itself when it has low battery, and as there is currently only one charger that every robot shares, the Arduino robot should be able to use that charger. Because of this, the Arduino robot has an 11.1V lithium battery which can charge itself using the same charger. The battery was bought from a Norwegian vendor called Elfa Distrelec\cite{elfa} since the price of lithium batteries was the same as ordering from outside Norway.
 
 Erlend Ese bought five nRF51 Dongles from Omega Verksted NTNU, one of these were used in the robot.
 
@@ -10,29 +11,31 @@ The Cybernetics Mechanical Workshop at NTNU manufactured all metallic parts and 
 
 The \acrshort{pcb} were designed in Eagle, see Section \ref{sec:software}, and printed by Elprolab\cite{elprolab} at NTNU. The plastic housings around the motors were designed in SolidWorks and 3D printed by the cybernetics mechanical workshop.
 
-The switches, \acrfull{led}, resistors, capacitors and wires were all acquired from the Cybernetics Workshop at NTNU.
+The switches, \acrfull{led}, resistors, capacitors and wires were all acquired from the Cybernetics Electrical Workshop at NTNU.
 
 All remaining parts were ordered from SparkFun early in the second week.
 
 %%%%
 
-\subsubsection{Assembly}
+\subsection{Assembly}
 The robot chassis consists of two parts that can be separated into top and bottom.
 
 \minisection{Bottom}
-The two driving wheels are mounted in the centre on the bottom plate; this makes the robot turn radius as small as possible. The IMU was placed right between the two wheels at the exact centre of the robot, which makes the \acrshort{imu} output as precise as possible. The metal casting was mounted back in the centre back of the car, and a thin metal plate was cut to make sure the casting ball was at the correct height so that the bottom plate were parallel to the ground. The battery, which is the heaviest component on the car, was placed right above the casting ball, making sure the robot is tail heavy. As there was not much room left on the bottom plate, the breadboard was placed in the only available space in the front of the bottom plate.
+The two driving wheels was originally mounted in the centre on the bottom plate; this makes the robot turn radius as small as possible. The \acrshort{imu} was placed between the two wheels at the exact centre of the robot, which makes the \acrshort{imu} output as precise as possible. The wheels and \acrshort{imu} where moved at a later stage in the project, this is further explained in Section \ref{sec:improvements}. The metal casting was mounted in the centre back of the car, and a thin metal plate was cut to make sure the casting ball was at the correct height so that the bottom plate were parallel to the ground. The battery, which is the heaviest component on the car, was placed right above the casting ball, making sure the robot is tail heavy. As there was not much room left on the bottom plate, the breadboard was placed in the only available space which was in the front of the bottom plate.
 
-All around the robot, between the bottom and the top plate, small plastic pillars were installed to connect and support the plates. Also, the charging towers are designed to add an extra connection between the two plates.
+\minisection{Middle}
+All around the robot, between the bottom and the top plate, small plastic pillars were installed to connect and support the two plates. Also, the charging towers are designed to add an extra connection between the two plates.
 
 \minisection{Top}
-The servo and the \acrshort{ir} tower was placed in such order that the tower rotates at the centre of the robot. The tower itself was made out of Lego bricks, the same way as the \acrshort{ir} tower on the other robots. As it is made of Lego, it is easy to take off and switch sensors if needed. The motor controller is placed right behind the \acrshort{ir} tower, and in front of the tower is the Arduino. Both the Arduino and the \acrshort{ir} tower is elevated so that wires can be run beneath them. Connected to the top plate but facing towards the bottom plate is the wheel encoders.  The encoders are placed in such order that they match up with the motors mounted on the bottom plate, with about 2mm distance from the magnet rings on the motors.
+The servo and the \acrshort{ir} tower was placed in such order that the tower rotates at the centre of the robot. The tower itself was made out of Lego bricks, the same way as the \acrshort{ir} tower on the other robots. As it is made of Lego, it is easy to take off and switch sensors if needed. The motor controller is placed right behind the \acrshort{ir} tower, and in front of the tower is the Arduino. Next to the motor controller there are two switches, one for powering the robot and one for enabling the charging towers. A switch on the charging tower is something the other robots do not have, but the group decided that it was necessary since driving with the charging towers enabled is a hazard, if the robot drives the charging tower into something that can conduct electricity it will short circuit the battery, a switch will eliminate this hazard. There is also installed a glass fuse to protect the Arduino. The motor controller, \acrshort{ir} tower and the Arduino is elevated so that wires can run beneath them. Connected to the top plate but facing towards the bottom plate is the wheel encoders. The encoders are placed in such order that they match up with the motors mounted on the bottom plate, with about 2mm distance from the magnet rings on the motors.
 
-There are several pictures of the robot in Appendix BLABLA.
-\task{APPEEEENDIIX}
+There are several pictures and videoes of the robot in Appendix \ref{app:media}.
 
-
-\subsubsection{Wiring}
+\subsection{Wiring}
 Before the components were connected, a wiring diagram (Figure \ref{fig:arduinomicrostation}) was created. The diagram ensured that all connections were done correctly and made it easier for maintenance/troubleshooting. The group used standard colouring conventions with red as positive power and black as ground while signal cables used other colours depending on the component. When the prototype first was created, all the wires were connected to a breadboard which made it easy to test if all components were connected correct and if they worked as intended. At a later stage in the project, the breadboard was replaced by a PCB that acts as an Arduino shield, further explained in Section \ref{sec:improvements}.
 \mabox{1}{Results/ardubot.pdf}{Arduino bot wiring}{fig:arduinomicrostation}
 
-Connections between components were done with self-made jumper wires, which makes it more straightforward to troubleshoot than many different single wires on the same board. Soldering was used to connect wires to the two switches and the charging tower springs. All work with soldering were done in the Cybernetics Workshop since the workshop provides a safe environment with sufficient ventilation.
+Connections between components were done with self-made jumper wires, which makes it more straightforward to troubleshoot than many different single wires on the same board. Soldering was used to connect wires to the two switches and the charging tower springs. All work with soldering were done in the Cybernetics Electrical Workshop since the workshop provides a safe environment with sufficient ventilation.
+
+As seen in Figure \ref{fig:arduinomicrostation} the 5V was taken from the voltage regulator on the motor controller and not from the Arduino, this because the voltage regulator on the Arduino could not supply enaugh power. The \acrshort{imu} and the six \acrshort{gpio} pins on the nRF51-dongle requires 3.3V power, so these wires goes via Logic Level Converters. For communication, nRF51 uses \acrshort{uart} (Section \ref{sec:uart}) and the \acrshort{imu} uses \acrshort{spi} (Section \ref{sec:spi}).
+

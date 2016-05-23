@@ -1,11 +1,13 @@
 % Grammarly 100
 \subsection{Serial Communication}
 \subsubsection{Universal Asynchronous Receiver/Transmitter (UART)}
+\label{sec:uart}
 The \acrfull{uart} is a bus that acts as a converter between parallel and serial interfaces. It enables a computer that uses an RS-232 interface to communicate with peripherals that use two-wired Serial RX-TX (see Figure \ref{fig:uart}) \cite{whatisuart}.
 \mabox{.8}{Theory/uart.PNG}{Simplified UART Interface \cite{sparkfunuart}}{fig:uart}
 \acrshort{uart}s are responsible for sending and receiving serial data. On the transmit side, a data packet is created and sent to the TX line, while on the receiving end, the \acrshort{uart} has to sample the RX line at the expected baud rate \cite{sparkfunuart}.
 
 \subsubsection{Serial Peripheral Interface (SPI)}
+\label{sec:spi}
 \acrfull{spi} was developed by Motorola to provide short-distance communication, primarily for use in embedded systems \cite{corelis2016}. The standard provides full-duplex synchronous serial communication over a 4-wired interface with the following signals \cite{epanorama2011}:
 \begin{itemize}
     \item \textit{MOSI} - Master-out, Slave-in
