@@ -1,8 +1,20 @@
-\section{Using the nRF51 as communication unit}
-Pros/Cons?
-
 \section{Using Bluetooth as communication protocol}
-Bluetooth vs WIFI f.eks
+In the early phase of the project, the groups discussed which communication protocol to use. The two protocols WIFI and Bluetooth early excelled as alternatives. The groups had programming experience with WIFI from previous school projects, but no experience with Bluetooth. One of the main advantages of using WIFI as communication protocol is that it is possible to communicate wirelessly without being close to the robot (e.g. controlling a robot, placed at the school, over Internet while sitting on a computer back home). The main disadvantage using WIFI was that components such as WIFI-shields and dongles often have a significant power consumption.
 
-\section{Homemade message protocol}
-Fungerte den? Enkel å utvide? Er der begrensninger? Enkel å tyde?
+When it comes to Bluetooth, the disadvantage was the lack of experience. Earlier projects on this topic used Bluetooth as communication, so it was in keeping with tradition to choose this protocol. As well as the lack of experience, the communication protocol in itself does not provide long-distance communication as the range is limited.  The advantages using Bluetooth is that it is available on most devices (tablets, computers, phones), it is suited for short-range on-site communication and it offers the Bluetooth Smart version that has a very low power consumption.
+
+According to Bluetooth \acrshort{sig} \cite{mesh} it is planned that Bluetooth is increasing its Internet of Things functionality by supporting mesh-networking during 2016. Mesh-network means that not all of the connected devices has to communicate directly to the server, but all of the devices talks to each other to share the network connection across a large area \cite{howmesh}. Mesh-networking means that it can significantly extend the range of the communication from $62.5m$ (as measured in Section \ref{sec:testcom}).
+
+\section{Using the nRF51 as communication unit}
+The nRF51-dongle was chosen as communication unit after choosing Bluetooth as the communication protocol. The dongle is developed by Nordic Semiconductor; a  company originated from NTNU.
+
+The nRF51 supports Bluetooth Smart as well as 2.4GHz proprietary applications \cite{nrf51Dongle}. Due to the Bluetooth Smart technology it has a low power consumption which suits the use in this thesis, and it will support Mesh-network when Bluetooth supports it. The dongle is relatively cheap (150 NOK), and was available for the groups at ``Omega Verksted'' at NTNU.
+
+One of the main advantages with the nRF51-dongle is that the SDK available at Nordic Semiconductors website \cite{nrf51sdk} provides several example codes for different applications of the dongle, and that made it easier to understand the functionality the device provides. As well as providing example code, Nordic Semiconductor answered on emails and arranged a meeting with the groups, which gave us a better insight in the device.
+
+Since the software on the nRF51 has a limitation on the capacity of connected devices, it is only possible to connect to six robots at the same time. At this point, there are only two robots that are available, so the limitation does no have any effect at the time, but if more robots are to be added in the future, this could introduce a problem. In addition to the maximum devices limitation, the software limits the message size of the message protocol.
+
+\section{The Message Protocol}
+During the project, the teams developed a message protocol that should lay the basis for all of the communication between the robots and the server. Initially, the message protocol used JSON-structure, which is an easy-to-read structure. The disadvantage using JSON to structure the messages in the protocol is that it adds a lot of extra characters to the message (curly brackets and colons) that works as parameter dividers. The latter means that a message that contains relatively little content becomes a message that contains unnecessarily many characters. Due to the message length constraint in the nRF51 software, the groups had to move away from using JSON.
+
+Developing a more compact message protocol made it possible to add more parameters to a single message while making sure the message size was as small as possible. The message protocol provides all the message types required for the system to work, as well as it lays a basis for how to structure additional messages if future projects want to add more functionality to the system. One of the drawbacks using a compact message protocol is that if the user intends to study the messages but does not have the definition of the message content, it will be difficult, if not impossible, to understand what the parameters means. 
