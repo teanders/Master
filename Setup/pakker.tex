@@ -16,7 +16,7 @@
 \usepackage{url}
 %\usepackage{natbib}
 \usepackage{csquotes}
-\usepackage[backend=biber]{biblatex}
+\usepackage[backend=biber,block=ragged]{biblatex}
 \usepackage{sectsty}
 
 
@@ -112,5 +112,8 @@ escapeinside={\%*}{*)}          % if you want to add a comment within your code
     citecolor=black,%
     filecolor=black,%
     linkcolor=black,%
-    urlcolor=black
+    urlcolor=black,%
+    breaklinks=true
 }
+\urlstyle{same}
+\Urlmuskip=0mu plus 1mu
