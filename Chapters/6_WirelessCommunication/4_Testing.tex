@@ -30,3 +30,50 @@ The environment was the open mingling area ``Glassgården'' at ``Elektrobygget''
 \minisection{Setting up the Environment}
 \minisection{Data Acquisition}
 \minisection{Test Result}
+
+\begin{table}[ht]
+\begin{center}
+ \begin{tabular}{|l | l |} 
+ \hline
+ Environment: 	&	\textbf{Corridor}\\
+ \hline
+ \end{tabular}
+ \begin{tabular}{|l|l|l|}
+ \hline
+ Distance [meter] & Message error [/min] &  Fault percentage [\%]\\
+ \hline
+ 1		        &   0 		&	0    \\
+ 5              &   3  		&	1,000\\
+ 10             &   7  		&	2,333\\
+ 15				&	2 		&	0,066\\
+ 20				&	10 		&	3,333\\
+ 25				&	-		&	-    \\
+ \hline
+\end{tabular}
+\end{center}
+\caption{Message Integrity Test in Corridor}
+\label{tab:messintegritycorr}
+\end{table}
+
+\begin{table}[ht]
+\begin{center}
+ \begin{tabular}{|l | l |} 
+ \hline
+ Environment: 	&	\textbf{Open landscape}\\
+ \hline
+ \end{tabular}
+ \begin{tabular}{|l|l|l|}
+ \hline
+ Distance [meter] & Message error [/min] &  Fault percentage [\%]\\
+ \hline
+ 1		        &   0 		&	0    \\
+ 5              &   5  		&	1,667\\
+ 10             &   3  		&	1,000\\
+ 15				&	14 		&	4,667\\
+ 20				&	-  		&	-	\\
+ \hline
+\end{tabular}
+\end{center}
+\caption{Message Integrity Test in Open Landscape}
+\label{tab:messintegrityopen}
+\end{table}
