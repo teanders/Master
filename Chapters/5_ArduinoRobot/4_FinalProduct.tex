@@ -1,8 +1,10 @@
+\section{Final Product}
 The finished Arduino robot is pictured in Figure \ref{fig:arduinorobotferdig}. In additional to the improvements described above, some minor improvements were made. Three \acrshort{led}s (Red, Orange, Green) were added to help with debugging, the AVR robot has the same three \acrshort{led}s. To help with positioning, Ese (2016) added a compass.
-\mabox{0.7}{Results/ArduinoRobotFin.png}{Arduino Robot}{fig:arduinorobotferdig}
 
 As seen in Figure \ref{fig:arduinorobotferdig} the gears described in Section \ref{sec:motoraxle} moved the wheels 47mm forwards, the group also moved the \acrshort{imu} so that it is still in between the wheels. In additional to moving the wheels, the wheels themselves was replaced with larger and softer wheels. Softer wheels help with traction, which again minimise error when estimating position. The new wheels are 82mm in diameter and the gear ratio is 12.5:1.
 
 After the \acrshort{pcb} was printed there was discovered a few mistakes on the board, these were fixed by adding an extra wire between two points on the board. Later in the project period, some pins were moved to other inputs to optimise the board. The \acrshort{led}s were also added after the \acrshort{pcb} was made, these are connected via the breadboard. Since there were several changes after the \acrshort{pcb} was made, a new and updated \acrshort{pcb} should be printed, this is further explained in Further Work, Section \ref{sec:fwSkjold}.
 
 During final testing of the robot, the wheel encoder got damaged, and the position estimates are now wrong when the robot is driving. This is the only part that does not work on the robot and therefore, the code that drives the robot is commented out. The robot can still be used in cooperation between other robots as communication and \acrshort{ir} scanning works, but the robot will not move.
+\vspace*{20pt}
+\mabox{0.7}{Results/ArduinoRobotFin.png}{Arduino Robot}{fig:arduinorobotferdig}

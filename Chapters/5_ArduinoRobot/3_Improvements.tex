@@ -17,8 +17,10 @@ As SolidWorks, see Section \ref{sec:software}, is a modelling software, it was s
 \subsection{Designing the Printed Circuit Board}
 Connecting wires using a breadboard is nice for prototyping, but a finished product should have a \acrshort{pcb} that connects the different components together. When all components were tested and the wiring was confirmed to be correct a \acrshort{pcb} was designed in Eagle. The following five steps explain the process:
 \begin{enumerate}[1.]
-\item The wiring diagram created in Microstation (Figure \ref{fig:arduinomicrostation}), was converted to a schematic in Eagle. The schematic determines how the different components are connected to each other, Figure BLABLA illustrates the schematic design. \task{FIGUR}
-\item From the schematic a board is created in Eagle. The board file determines the layout and how the different components and wires should be printed on the finished \acrshort{pcb}. The board was designed in such order that it could be placed right on top of the Arduino. Figure BLABLA illustrates the board design. \task{figur}
+\item The wiring diagram created in Microstation (Figure \ref{fig:arduinomicrostation}), was converted to a schematic in Eagle. The schematic determines how the different components are connected to each other, Figure \ref{fig:esch} illustrates the schematic design. The Eagle file and a fullscale picture can be found in Appendix \ref{app:wiring}.
+\mabox{1}{Results/eSchematic.png}{Eagle Schematic drawing}{fig:esch}
+\item From the schematic a board is created in Eagle. The board file determines the layout and how the different components and wires should be printed on the finished \acrshort{pcb}. The board was designed in such order that it could be placed right on top of the Arduino. Figure \ref{fig:eboard} illustrates the board design. The Eagle file and a fullscale picture can be found in Appendix \ref{app:wiring}.
+\mabox{1}{Results/eBoard.png}{Eagle Board drawing}{fig:eboard}
 \item When the \acrshort{pcb} design was finished in Eagle, the Eagle files was converted to Gerber files. The Gerber files give instruction to the \acrshort{pcb} printer for how the board should be printed.
 \item The Gerber files was sent to Elprolab and the \acrshort{pcb} was printed.
 \item Every component was soldered onto the \acrshort{pcb} at the Cybernetics Electrical Workshop.
