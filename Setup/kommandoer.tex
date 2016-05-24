@@ -133,7 +133,10 @@
 \renewcommand{\theteAppendixCounter}{\Alph{teAppendixCounter}} % Kommenter ut for å få tall istedet for A B C
 
 \newcommand{\teAppendix}[2]{
-    \refstepcounter{teAppendixCounter}\label{app:#2} Appendix \theteAppendixCounter: \hspace{2pt} #1 
-
+    \refstepcounter{teAppendixCounter}\label{app:#2} 
+    \begin{tabularx}{\textwidth}{p{.2\textwidth} p{.8\textwidth}}
+    Appendix \theteAppendixCounter & #1 
+    \end{tabularx}
+    \par
     \vspace*{-5pt}
 }
