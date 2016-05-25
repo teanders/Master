@@ -1,17 +1,16 @@
 \newpage
-\section{Testing the Communication}
+\section{Distance and integrity tests}
 \label{sec:testcom}
-\subsection{Distance and integrity}
 The purpose of the test was to determine how far away the robot could move from server while delivering sufficient updates.
 \subsubsection{Corridor}
 \minisection{Environment}
-The environment was a school corridor with no physical obstacles. Size of the corridor:
+The environment was a school corridor with no physical obstacles, the walls, roof and floor was made of concrete. Size of the corridor:
 \begin{itemize}
     \item Height: $2.50 m$
     \item Width: $2.00 m$
 \end{itemize}
 \minisection{Data Acquisition}
-The server computer was placed at the end of the corridor, and the server application was started. When the communication was established between the server and the Arduino robot, one of the group members lifted up the robot and moved it 5 meters away from the server and the server counted how many messages that contained errors during 1 minute of testing. The procedure was repeated at every 5 meters until the message integrity was too bad to continue.
+The server computer was placed at the end of the corridor, then the server application was started. When the communication was established between the server and the Arduino robot, one of the group members lifted up the robot and moved it 5 meters away from the server and the server counted how many messages that contained errors during 1 minute of testing. The procedure was repeated at every 5 meters until the message integrity was too bad to continue.
 \minisection{Test Result}
 
 \begin{table}[ht]
@@ -37,11 +36,13 @@ The server computer was placed at the end of the corridor, and the server applic
 \caption{Message Integrity Test in Corridor}
 \label{tab:messintegritycorr}
 \end{table}
+At 25 meters the robot had problems with sending messages and therefore the test ended. The robot did not loose his connection to the server, but no messages was received. {\color{blue}{The conclusion is that a robot should never be further apart than 20 meters from the server dongle.}}
 
 \newpage
 \subsubsection{Open landscape}
 \minisection{ Environment}
 The environment was the open mingling area ``Glassgården'' at ``Elektrobygget'' NTNU. 
+\task{høyde og bredde?}
 \minisection{Data Acquisition}
 The same procedure as described in the corridor test was done during this test.
 \minisection{Test Result}
@@ -68,3 +69,5 @@ The same procedure as described in the corridor test was done during this test.
 \caption{Message Integrity Test in Open Landscape}
 \label{tab:messintegrityopen}
 \end{table}
+
+Surprisingly the robot had more problems in ``Glassgården'' than in the corridor. The robot had some problems at 15 meters and at 20 the server did not receive any messages. Likewise as the corridor example the robot did not loose its connection, but could not send messages.{\color{blue}{The conclusion is that a robot should never be further apart than 15 meters from the server dongle.}}
