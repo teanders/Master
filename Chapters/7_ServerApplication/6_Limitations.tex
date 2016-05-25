@@ -1,4 +1,5 @@
 \section{Limitations}
+\label{secr:limitations}
 \minisection{Disconnecting before connecting}
 Due to an indexing problem in the nRF51-dongle, it was needed to constrain the progress of connecting to additional robots. Before initializing a scan for new robots, all of the robots that are attached to the system has to be disconnected. The reason for this is that when the nRF51 scans and discovers new unattached robots, it indexes them from 0 and up, even though there already were robots connected from before the scan. The former will lead to several robots with the same ID (e.g. two robots with ID = 1), which is undesirable.
 
