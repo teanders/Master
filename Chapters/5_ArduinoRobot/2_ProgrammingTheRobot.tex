@@ -7,7 +7,7 @@ The software that runs on the Arduino robot is the same as the one on the AVR ro
 AtmelStudio 6.2 (described in Section \ref{sec:software}), It is possible to configure external tools such as AVRdude, to run straight from AtmelStudio. This makes it easy to edit and upload new programs to an Arduino.
 \newpage
 \minisection{AVRdude}
-As mentioned above, AVRdude is used to program the Arduino board. AVRdude is a command-line program and by passing the correct arguments it is possible to program an Arduino board. The easiest way to find the right arguments is by showing verbose output during an upload from Arduino IDE.
+As mentioned above, AVRdude is used to program the Arduino board. AVRdude is a command-line program and by passing the correct arguments, it is possible to program an Arduino board. The easiest way to find the right arguments is by showing verbose output during an upload from Arduino IDE.
 
 AVRdude comes with a normal Arduino IDE installation and can be found in ``Arduino/hardware/tools/avr/bin/avrdude.exe''. It is also possible to build AVRdude from source files, but this is a much more complex process, so it is recommended to download and install Arduino IDE.
 
@@ -15,7 +15,7 @@ AVRdude comes with a normal Arduino IDE installation and can be found in ``Ardui
 Described in Section \ref{sec:progplatarduino}
 
 \subsection{Configuring software}
-There are several steps to configure AtmelStudio to work with AVRdude and Arduino. First we need to generate the correct command-line parameters for AVRdude, then implement them into AtmelStudio. The process is explained below.
+There are several steps to configure AtmelStudio to work with AVRdude and Arduino. First, we need to generate the correct command-line parameters for AVRdude, then implement them into AtmelStudio. The process is explained below.
 
 \minisection{Create command-line parameters for AVRdude}
 \begin{enumerate}
@@ -74,10 +74,10 @@ There are several steps to configure AtmelStudio to work with AVRdude and Arduin
     -F -v -patmega2560 -cwiring -PCOM6 -b115200 -D -Uflash:w:"$(ProjectDir)Debug/$(ItemFileName).hex":i -CC:/Arduino/hardware/tools/avr/etc/avrdude.conf
     \end{lstlisting}
     
-    \item Toogle ``Use Output window'' on
+    \item Toggle ``Use Output window'' on
     \item If everything is configured properly it is now possible to upload C code directly to the Arduino board by pressing Tools -> Deploy code
 \end{enumerate}
-NB! Quotes is needed before and after the file structure if the file structure contains spaces, e.g.
+NB! Quotes are needed before and after the file structure if the file structure contains spaces, e.g.
 \begin{lstlisting}
   -C"C:/Program Files (x86)/Arduino/hardware/tools/avr/etc/avrdude.conf"
 \end{lstlisting}

@@ -1,5 +1,5 @@
 \section{Designing the Real-Time System Flow}
-The purpose of this year's project was to make the robots able to drive and scan in real-time, not sequentially drive-stop-scan. Therefore, it was important that the server application from the first line of code were developed in terms of concurrent programming.
+The purpose of this year's project was to make the robots able to drive and scan in real-time, not sequentially drive-stop-scan. Therefore, it was important that the server application from the first line of code were developed concerning concurrent programming.
 
 The group sat down with the list of modules and decided which modules that should consist of threads. As seen in Figure \ref{fig:brainstorming}, the modules containing threads are marked with a curly sign at the left of the module. The intention of defining which modules that should include thread handling in the early phase of the development was contributing to avoid thread handling issues like race conditions and deadlocks, as described in Section \ref{sec:concurrentprog}.
 

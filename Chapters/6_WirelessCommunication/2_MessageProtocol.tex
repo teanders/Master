@@ -65,7 +65,7 @@ At first, the group developed a message protocol using JSON-structure. The benef
 \{``Update'':[\{``Orientation'':``60''\},\{``Distance'':``100''\}]\}
 \task{Skrive disse på kodesnutt-måte?}
 
-Due to some problems with the nRF51-server software not being able to receive messages with a size greater than 60 Bytes, and the nrf51-peripheral not being able to receive messages greater than 20 Bytes, the group converted the message protocol from JSON-structure to a more compact designed structure. The update message (from server) was then defined as:
+Due to some problems with the nRF51-server software not being able to receive messages with a size greater than 60 Bytes, and the nrf51-peripheral not being able to receive messages larger than 20 Bytes, the group converted the message protocol from JSON-structure to a more compact designed structure. The update message (from server) was then defined as:
 
 \{U,60,100\}
 
