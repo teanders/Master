@@ -7,11 +7,12 @@ The groups sat down and discussed what kinds of messages the protocol should imp
 \begin{center}
  \begin{tabular}{|l | l|} 
  \hline
+ From: & \textbf{Robot}\\
+ \hline
+ \hline
  Message type       &    Parameters \\
  \hline
- \hline
- From Robot: & \\
- \hline
+
  Handshake          &   Message type \\
                      &    Physical robot width and length  \\
                     &   Tower offset from centreof the robot\\
@@ -38,11 +39,12 @@ The groups sat down and discussed what kinds of messages the protocol should imp
 \begin{center}
  \begin{tabular}{|l | l|} 
  \hline
+ From: & \textbf{Server}\\
+ \hline
+ \hline
  Message type       &    Parameters \\
  \hline
- \hline
- From Server: & \\
- \hline
+
  Update              &   Message type \\
                     &   Orientation \\
                     &   Distance \\
@@ -67,6 +69,7 @@ Due to some problems with the nRF51-server software not being able to receive me
 
 \{U,60,100\}
 
-The remaining message types were defined in the same manner. Figure \ref{fig:messprot}, and Appendix \ref{app:mesprot}, presents all message types and parameters implemented in the message protocol. As can be seen, some of the message content is adjusted from what was originally planned in Table \ref{tab:messprotfromrob} and \ref{tab:messprotfromser}.
+The remaining message types were defined in the same manner. Figure \ref{fig:messprot} illustrates a simple overview of the messages that are sent and received, while Appendix \ref{app:mesprot} presents all message types and parameters implemented in the message protocol.
 
-\mabox{1}{Results/Meldingsprotokoll}{Message Protocol}{fig:messprot}
+
+\mabox{1}{Results/MessageProtocolSimple}{Message Protocol}{fig:messprot}

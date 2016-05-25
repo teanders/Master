@@ -1,5 +1,5 @@
 \section{System Flow}
-To better give an insight of how the system works, the following cases demonstrates how the system flow works during runtime. For more detailed information regarding the functionality of the system, please refer to Appendix \ref{app:uml} and \ref{app:javadoc}.
+To better give an insight of how the system works, the following cases demonstrates how the system flow works during runtime, see Figure \ref{fig:simpleclass} for reference. For more detailed information regarding the functionality of the system, please refer to Appendix \ref{app:javadoc} and \ref{app:uml}.
 
 \minisection{Case 1: ``Update message'' received}
 \begin{itemize}
@@ -20,3 +20,5 @@ To better give an insight of how the system works, the following cases demonstra
     \item InboxReader interprets the message content (robot IDs and robot names) and passes the found robots to RobotController.
     \item RobotController lists the discovered devices in an observable ArrayList, which updates the ``Found robots'' in the ConnectRobotsGUI.
 \end{itemize}
+
+\mabox{1}{Results/SystemModulesAndClasses.png}{Simple Class Diagram}{fig:simpleclass}
