@@ -1,8 +1,8 @@
+\newpage
 \section{Testing the Communication}
 \label{sec:testcom}
-\subsection{Distance}
-The purpose of the test was to determine how far away the robot could move without losing the connection to the server.
-
+\subsection{Distance and integrity}
+The purpose of the test was to determine how far away the robot could move from server while delivering sufficient updates.
 \subsubsection{Corridor}
 \minisection{Environment}
 The environment was a school corridor with no physical obstacles. Size of the corridor:
@@ -11,24 +11,7 @@ The environment was a school corridor with no physical obstacles. Size of the co
     \item Width: $2.00 m$
 \end{itemize}
 \minisection{Data Acquisition}
-The server computer was placed at the end of the corridor, and the server application was started. When the communication was established between the server and the Arduino robot, one of the group members lifted up the robot and moved it slowly away from the server. When the server- and the robot-dongle lost the connection, the robot was placed on the ground, and the distance was measured.
-\minisection{Test Result}
-The connection between the Arduino and the server was not lost until the distance between the two was $62.5 m$.
-
-\subsubsection{Open landscape}
-\minisection{ Environment}
-The environment was the open mingling area ``Glassgården'' at ``Elektrobygget'' NTNU. 
-\minisection{Data Acquisition}
-\minisection{Test Result}
-
-\subsection{Integrity}
-\subsubsection{Corridor}
-\minisection{Setting up the Environment}
-\minisection{Data Acquisition}
-\minisection{Test Result}
-\subsubsection{Open landscape}
-\minisection{Setting up the Environment}
-\minisection{Data Acquisition}
+The server computer was placed at the end of the corridor, and the server application was started. When the communication was established between the server and the Arduino robot, one of the group members lifted up the robot and moved it 5 meters away from the server and the server counted how many messages that contained errors during 1 minute of testing. The procedure was repeated at every 5 meters until the message integrity was too bad to continue.
 \minisection{Test Result}
 
 \begin{table}[ht]
@@ -54,6 +37,14 @@ The environment was the open mingling area ``Glassgården'' at ``Elektrobygget''
 \caption{Message Integrity Test in Corridor}
 \label{tab:messintegritycorr}
 \end{table}
+
+\newpage
+\subsubsection{Open landscape}
+\minisection{ Environment}
+The environment was the open mingling area ``Glassgården'' at ``Elektrobygget'' NTNU. 
+\minisection{Data Acquisition}
+The same procedure as described in the corridor test was done during this test.
+\minisection{Test Result}
 
 \begin{table}[ht]
 \begin{center}
