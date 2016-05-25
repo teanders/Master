@@ -62,12 +62,11 @@ The groups sat down and discussed what kinds of messages the protocol should imp
 
 At first, the group developed a message protocol using JSON-structure. The benefit of using JSON to structure a message protocol is that it is easy to understand just by reading the message as well as the order of the parameters does not have to be specified. The update message from server in JSON-structure was defined as:
 
-\{``Update'':[\{``Orientation'':``60''\},\{``Distance'':``100''\}]\}
-\task{Skrive disse på kodesnutt-måte?}
+\code{\{``Update'':[\{``Orientation'':``60''\},\{``Distance'':``100''\}]\}}
 
 Due to some problems with the nRF51-server software not being able to receive messages with a size greater than 60 Bytes, and the nrf51-peripheral not being able to receive messages larger than 20 Bytes, the group converted the message protocol from JSON-structure to a more compact designed structure. The update message (from server) was then defined as:
 
-\{U,60,100\}
+\code{\{U,60,100\}}
 
 The remaining message types were defined in the same manner. Figure \ref{fig:messprot} illustrates a simple overview of the messages that are sent and received, while Appendix \ref{app:mesprot} presents all message types and parameters implemented in the message protocol.
 
