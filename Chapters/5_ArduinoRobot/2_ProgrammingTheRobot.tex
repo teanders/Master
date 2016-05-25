@@ -1,11 +1,11 @@
 \section{Programming the Arduino robot}
-It is important to make the Arduino robot able to run on the same program as the other robots, this will save work and help the robots to have the newest software. The other robots are programmed in C and since the Arduino language is a set of C/C++ functions it is possible to copy the code directly and use it on the Arduino Mega. It is also possible to setup a computer to directly compile and upload C code to the ATMEGA2560 chip on the Arduino. There are several steps to this, but once everything is installed and properly configured it is quick and easy to make changes or upload new programs. By doing so, the same program can run on all the robots from the different projects, and if there is an improvement in the code in the future, it can easily be installed on all of the robots.
+It is important to make the Arduino robot able to run on the same program as the other robots; this will save work and help the robots to always have the newest software. The existing robots are programmed in C and since the Arduino language is a set of C/C++ functions it is possible to copy the code directly and use it on the Arduino Mega. It is also possible to setup a computer to directly compile and upload C code to the ATMEGA2560 chip on the Arduino. There are several steps to this, but once everything is installed and properly configured it is quick and easy to make changes and upload new programs. By doing so, the same program can run on all the robots from the different projects, and if there is an improvement in the code in the future, it can easily be installed on all of the robots.
 
 The software that runs on the Arduino robot is the same as the one on the AVR robot, for more information about the software see Ese (2016). The next subsections will focus on how to program C code on the Arduino.
 \subsection{Requirements}
 \minisection{AtmelStudio}
 AtmelStudio 6.2 (described in Section \ref{sec:software}), It is possible to configure external tools such as AVRdude, to run straight from AtmelStudio. This makes it easy to edit and upload new programs to an Arduino.
-\newpage
+
 \minisection{AVRdude}
 As mentioned above, AVRdude is used to program the Arduino board. AVRdude is a command-line program and by passing the correct arguments, it is possible to program an Arduino board. The easiest way to find the right arguments is by showing verbose output during an upload from Arduino IDE.
 
@@ -14,6 +14,7 @@ AVRdude comes with a normal Arduino IDE installation and can be found in ``Ardui
 \minisection{Arduino IDE}
 Described in Section \ref{sec:progplatarduino}
 
+\newpage
 \subsection{Configuring software}
 There are several steps to configure AtmelStudio to work with AVRdude and Arduino. First, we need to generate the correct command-line parameters for AVRdude, then implement them into AtmelStudio. The process is explained below.
 
@@ -40,14 +41,14 @@ There are several steps to configure AtmelStudio to work with AVRdude and Arduin
 
 \minisection{Configure AtmelStudio}
 \begin{enumerate}
-    \item Start Atmel Studio 6.2
+    \item Start Atmel Studio 6.2.
     \item Press File -> New -> Project -> GCC C Executable Project -> choose the correct processor, in our case:
     \begin{lstlisting}
     ATmega2560
     \end{lstlisting}
-    \item Create a minimal example code, or copy paste the blinking led example in Figure \ref{fig:blinkc}
+    \item Create a minimal example code, or copy paste the blinking led example in Figure \ref{fig:blinkc}.
     \item Press Tools -> External Tools...
-    \item Change the Title: to 
+    \item Change the Title to: 
     \begin{lstlisting}
     &Deploy code
     \end{lstlisting}
@@ -74,8 +75,8 @@ There are several steps to configure AtmelStudio to work with AVRdude and Arduin
     -F -v -patmega2560 -cwiring -PCOM6 -b115200 -D -Uflash:w:"$(ProjectDir)Debug/$(ItemFileName).hex":i -CC:/Arduino/hardware/tools/avr/etc/avrdude.conf
     \end{lstlisting}
     
-    \item Toggle ``Use Output window'' on
-    \item If everything is configured properly it is now possible to upload C code directly to the Arduino board by pressing Tools -> Deploy code
+    \item Toggle ``Use Output window'' on.
+    \item If everything is configured properly it is now possible to upload C code directly to the Arduino board by pressing Tools -> Deploy code.
 \end{enumerate}
 NB! Quotes are needed before and after the file structure if the file structure contains spaces, e.g.
 \begin{lstlisting}
