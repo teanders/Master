@@ -1,4 +1,5 @@
 \section{Programming the Arduino robot}
+\label{sec:programardu}
 It is important to make the Arduino robot able to run on the same program as the other robots; this will save work and help the robots to always have the newest software. The existing robots are programmed in C and since the Arduino language is a set of C/C++ functions it is possible to copy the code directly and use it on the Arduino Mega. It is also possible to setup a computer to directly compile and upload C code to the ATMEGA2560 chip on the Arduino. There are several steps to this, but once everything is installed and properly configured it is quick and easy to make changes and upload new programs. By doing so, the same program can run on all the robots from the different projects, and if there is an improvement in the code in the future, it can easily be installed on all of the robots.
 
 The software that runs on the Arduino robot is the same as the one on the AVR robot, for more information about the software see Ese (2016). The next subsections will focus on how to program C code on the Arduino.
@@ -87,7 +88,7 @@ NB! Quotes are needed before and after the file structure if the file structure 
 %%% Om de har mellomrom osv i mappenavn må man ha "" forran og etter filnavn osv.
 
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \caption{Blinking led, C code}
     \label{fig:blinkc}
 \begin{lstlisting}
