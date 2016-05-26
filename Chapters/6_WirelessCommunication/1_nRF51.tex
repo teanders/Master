@@ -10,7 +10,7 @@ To program the nRF51-dongles, the following software has to be downloaded and in
     \item nRFgo Studio v1.21\cite{nrfgo}
     \item Keil MDK-ARM v5.20\cite{keil}
 \end{itemize}
-Drivers for the nRF51-dongle comes with nRFgo Studio, and it is recommended to install the drivers from nRFgo Studio before plugging in the nRF51 dongle. This because Windows tries to use ``Windows Update'' to search for the drivers, and as Windows does not find the correct drivers, it will scan indefinitely.
+Drivers for the nRF51-dongle comes with nRFgo Studio, and it is recommended to install the drivers from nRFgo Studio before plugging in the nRF51-dongle. This because Windows tries to use ``Windows Update'' to search for the drivers, and as Windows does not find the correct drivers, it will scan indefinitely.
 
 \minisection{Setting up the nRF51-dongle}
 Having installed the software listed above, the following procedure has to be followed to flash the dongle and prepare it for programming:
@@ -23,9 +23,9 @@ Having installed the software listed above, the following procedure has to be fo
     \item Click ``Program''.
 \end{enumerate}
 
-\section{Developing the nRF51-server software}
+\section{Developing the nRF51-server Software}
 \label{sec:devnrf}
-The nRF51-server should be able to communicate with several nRF51-peripherals. It has to provide functionality for sending messages to the connected peripherals and receiving messages from other connected peripherals at the same time. Since the server and peripherals are tightly coupled, the software on the dongles was developed together with Ese (2016).
+The nRF51-server should be able to communicate with several nRF51-peripherals. It has to provide functionality for sending messages to the connected peripherals and receiving messages from other connected peripherals at the same time. Since the server and peripherals are tightly coupled, the software on the dongles was developed together with Ese (2016). The nRF51-server source code can be found in Appendix \ref{app:nrf}.
 
 Nordic Semiconductor, the manufacturer of the dongle, has sample code for communication between two dongles, but this sample code can not be used when several dongles are connected to the server at the same time. There is also another sample code with peripherals and central (server), however in this code, the communication can only go one way. Marco Russi  \cite{marcoRussi} has modified Nordics ``central''-program to enable communication both ways. There was a meeting 12th of February together with Andersen, Ese and Nordic Semiconductor. The agenda of the meeting was to get a briefing about how Nordics peripheral- and central-code works, to get more information about the nRF51-dongle and to do some investigation in Marco Russi's code.
 

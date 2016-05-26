@@ -2,20 +2,20 @@
 \label{sec:improvements}
 After the robot had been built according to Section \ref{sec:robotdesign}, the robot had a few flaws. Since the group was a few days ahead of the schedule, some improvements on the initial design were made.
 
-\subsection{Designing the Motor and Axle plastic housings}
+\subsection{Designing the Motor and Axle Plastic Housings}
 \label{sec:motoraxle}
 The assembled robot was too heavy in the centre, and this led to the wheels leaning towards the chassis. This can be seen in Figure \ref{fig:robpremothold}.  As this would have influenced the performance of the robot while driving, the group decided to improve the assembled robot to neutralise the maldistribution of weight. It was decided to design and 3D-print a motor holder that prevents the wheel angulation.
 
 There was some problematics with \acrshort{pwm} velocity regulation using the original wheel and motor; please refer to Ese(2016) for elaboration. The groups decided to gear down the rotation speed from the motor instead, but when doing so, the original axle got broken. As it now was needed to fix the motor by making a new shaft, it was possible to build a new gearing system using the same parts as is used on the AVR robot. Using different Lego part to gear down the rotation presented the need for an axle housing to hold the new wheel axle in place.
 
-As SolidWorks, see Section \ref{sec:software}, is a modelling software, it was suited to use for this task. Measuring the physical robot gave an accurate basis for designing the motor and axle housing, taking screws and nuts mounted to the chassis into account. The measurements and shapes obtained from the physical robot were modelled in SolidWorks and was 3D-printed at the Cybernetic Mechanical Workshop at NTNU. Detailed schematics for the parts can be found in Appendix \ref{app:parts}.
+As SolidWorks, see Section \ref{sec:software}, is a modelling software, it was suited to use for this task. Measuring the physical robot gave an accurate basis for designing the motor and axle housing, taking screws and nuts mounted to the chassis into account. The measurements and shapes obtained from the physical robot were modelled in SolidWorks and was 3D-printed at the Cybernetic Mechanical Workshop at NTNU. Detailed schematics for the parts can be found in Appendix \ref{app:parts} ``Modelled Parts''. 
 
 \mabox{.5}{Methods/RobotWithoutMotorHolder.png}{Robot without improvements}{fig:robpremothold}
 
 \subsection{Designing the Printed Circuit Board}
 Connecting wires using a breadboard suits a prototype, but a finished product should have a \acrshort{pcb} that connects the different components together. When all components were tested and the wiring was confirmed to be correct a \acrshort{pcb} was designed in Eagle. The following five steps explain the process:
 \begin{enumerate}[1.]
-\item The wiring diagram created in Microstation, see Figure \ref{fig:arduinomicrostation}, was converted to a schematic in Eagle. The schematic determines how the different components are connected to each other, as can be seen in Figure \ref{fig:esch}. The Eagle file and a full-scale picture can be found in Appendix \ref{app:wiring}.
+\item The wiring diagram created in Microstation, see Figure \ref{fig:arduinomicrostation}, was converted to a schematic in Eagle. The schematic determines how the different components are connected to each other, as can be seen in Figure \ref{fig:esch}. The Eagle file and a full-scale picture can be found in Appendix \ref{app:wiring} ``Wiring Diagrams''.
 \mabox{1}{Results/eSchematic.png}{Eagle Schematic drawing}{fig:esch}
 \item From the schematic, the board is created in Eagle. The board file determines the layout and how the different components and wires should be printed on the finished \acrshort{pcb}. The board was designed in such order that it could be placed right on top of the Arduino. Figure \ref{fig:eboard} illustrates the board design. The Eagle file and a full-scale picture can be found in Appendix \ref{app:wiring}.
 \mabox{1}{Results/eBoard.png}{Eagle Board drawing}{fig:eboard}
