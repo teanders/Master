@@ -1,7 +1,8 @@
 \section{Creating the Message Protocol}
+\label{sec:cremessprot}
 When implementing the communication between the physical robots and the server software, the groups realised the need for a general message protocol. The message protocol should be complex enough to consist of different message types and parameters as well as being simple enough to be easy to understand and implement in software. 
 
-The groups sat down and discussed what kinds of messages the protocol should implement, and what the messages should include of parameters. The message types and parameters were listed as shown in Table \ref{tab:messprotfromrob} and Table \ref{tab:messprotfromser}:
+The groups sat down and discussed which kind of messages the protocol should implement, and what the messages should include of parameters. The message types and parameters were listed as shown in Table \ref{tab:messprotfromrob} and Table \ref{tab:messprotfromser}.
 
 \begin{table}[ht]
 \begin{center}
@@ -15,9 +16,9 @@ The groups sat down and discussed what kinds of messages the protocol should imp
 
  Handshake          &   Message type \\
                      &    Physical robot width and length  \\
-                    &   Tower offset from centreof the robot\\
+                    &   Tower offset from centre of the robot\\
                     &    Axle offset lengthwise \\
-                    &    Sensor offset from tower center \\
+                    &    Sensor offset from tower centre \\
                     &    Initial sensor heading \\
  \hline
  Update              &   Message type \\
@@ -64,10 +65,10 @@ At first, the group developed a message protocol using JSON-structure. The benef
 
 \code{\{``Update'':[\{``Orientation'':``60''\},\{``Distance'':``100''\}]\}}
 
-Due to some problems with the nRF51-server software not being able to receive messages with a size greater than 60 Bytes, and the nrf51-peripheral not being able to receive messages larger than 20 Bytes, the group converted the message protocol from JSON-structure to a more compact designed structure. The update message (from server) was then defined as:
+Due to some problems with the nRF51-server software not being able to receive messages with a size greater than 60 Bytes, and the nrf51-peripheral not being able to receive messages larger than 20 Bytes, the group converted the message protocol from JSON-structure to a more compact designed structure. The update message (from server) including the same values as the JSON-example, was then defined as:
 
-\code{\{U,``Orientation'',``Distance''\}}
+\code{\{U,60,100\}}
 
 The remaining message types were defined in the same manner. Figure \ref{fig:messprot} illustrates a simple overview of the messages that are sent and received, while Appendix \ref{app:mesprot} presents all message types and parameters implemented in the message protocol.
 
-\mabox{0.7}{Results/MessageProtocolSimple}{Flow of different message types}{fig:messprot}
+\mabox{0.7}{Results/MessageProtocolSimple}{Flow of the different message types}{fig:messprot}
