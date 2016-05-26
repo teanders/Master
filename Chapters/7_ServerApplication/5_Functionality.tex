@@ -2,10 +2,10 @@
 \section{Functionality}
 \label{secr:functionality}
 \minisection{Cross-platform}
-The server application in its entirety is written in the Java programming language, which makes the software able to run on any device that has \acrlong{jvm}. Because Java applications are compiled before runtime, the server application will not be as demanding as applications that are compiled runtime. 
+The server application in its entirety is written in the Java programming language, which makes the software able to run on any device that has \acrlong{jvm}. Because Java applications are compiled before runtime, the server application will not be as demanding as applications that are compiled runtime.
 
 \minisection{Connecting to N-robots}
-The software is developed in a way that each robot that is connected to the system has one object of the class Robot connected to it, which means that as long as the computer can add another instance of the class Robot, it can connect to more robots. 
+The software is developed in a way that each robot that is connected to the system has one object of the class Robot connected to it, which means that as long as the computer can add another instance of the class Robot, it can connect to more robots.
 
 \minisection{Real-time mapping and plotting}
 The robots attached to the system sends update messages every 200ms, and the information extracted from the messages is processed and plotted on the map presented in the GUI, which means that the user will be able to see the mapping progress in real-time. The system also continuously updates the robots in real-time, which means that the system is fully exploiting the functionality of Ese(2016) real-time OS running at the connected robots.
