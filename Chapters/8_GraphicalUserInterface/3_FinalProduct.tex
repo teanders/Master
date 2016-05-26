@@ -1,10 +1,22 @@
 \section{The Final Product}
+\label{secr:finprodgui}
 The final product can be viewed in Figure \ref{img:mainWindowFinal}, which shows the main window. In this figure, there are two simulated robots (Arduino and Atmel) driving around in a simulated world. The GUI that controls the simulation can be opened by pressing the menu Window and then pressing Simulator. For more information about the Simulator GUI, please refer to Thon (2016).
 
-\mabox{1}{Results/guiFinal.png}{GUI, Main window}{img:mainWindowFinal} 
+\mabox{.8}{Results/guiFinal.png}{GUI, Main window}{img:mainWindowFinal} 
 
-The main \acrshort{gui} is divided into seven parts as illustrated by Figure \ref{img:mainWindowFinal}. Objects that have similar functions are grouped together, and the different groups are separated by borders. When hovering the mouse over an object in the \acrshort{gui}, the info panel marked with seven in Figure \ref{img:mainWindowFinal} will give extra information about that object, in Figure \ref{img:mainWindowFinal} the user has the mouse hovering the map. The \acrshort{gui} is created with the Gestalt Principles (Section \ref{sec:gestaltprinciples}) and Schneiderman's 8 golden rules (Section \ref{sec:schneiderman}) in mind and if anything is unclear the user can press the menu item Help and then User manual, which will open the user manual in the default PDF viewer. The user manual can be found in Appendix \ref{app:userman}, and it provides information about every function in the user interface.
+The main \acrshort{gui} is divided into seven parts as illustrated by Figure \ref{img:mainWindowFinal}. Objects that have similar functions are grouped together, and the different groups are separated by borders. The \acrshort{gui} is created with the Gestalt Principles (Section \ref{sec:gestaltprinciples}) and Schneiderman's 8 golden rules (Section \ref{sec:schneiderman}) in mind and if anything is unclear the user can press the menu item ``Help'' and then ``User manual'', which will open the user manual in the default PDF viewer. The user manual can be found in Appendix \ref{app:userman}, and it provides information about every function in the user interface.
 
-Figure \ref{fig:guiflow} illustrates the different parts of the final \acrshort{gui}. After choosing a mode, the mode-specific window opens. Clicking ``Connect robots'' brings up the related window, and as the scan finishes, the available robots gets listed. After selecting the desired robot(s) and clicking ``Connect'' the communication with the robot(s) establishes, and the server receives a handshake message from the robot(s) confirming the connection. Furthermore, the user sets the initial values for the specific robots, and after the values are set, clicking ``Start'' will initialize the mapping.
+In the following list, the parts of the main window are described:
+\begin{enumerate}
+	\item Menu bar - The menu provides mode specific functionality, as well as a help menu where the user manual can be found.
+    \item Mode title - This panel tells you which mode the program is currently running in.
+    \item Connected Robots - This panel will be updated with the connected robots. Clicking the ``More info'' button will open up the Robot info window.
+    \item Connect robots - This button will open up the ``Connect Robots'' window.
+    \item Start/Stop - The start and stop buttons will start and stop the application. The indicator will light green if the program is running.
+    \item Map - The map will be painted in real time as the robots discover new areas.
+    \item Info - The information panel will display informative text as the mouse cursor hovers over the different parts of the \acrshort{gui}.
+\end{enumerate}
 
-\mabox{.8}{Results/GUIFlow.png}{GUI Flow}{fig:guiflow}
+Figure \ref{fig:guiflow} illustrates the navigation through the different parts of the final \acrshort{gui}. After choosing a mode, the mode-specific window opens. Clicking ``Connect robots'' brings up the related window, and as the scan finishes, the available robots gets listed. After selecting the desired robot(s) and clicking ``Connect'' the communication with the robot(s) establishes, and the server receives a handshake message from the robot(s) confirming the connection. Furthermore, the user sets the initial values for the specific robots, and after the values are set, clicking ``Start'' will initialize the mapping.
+
+\mabox{1}{Results/GUIFlow.png}{GUI Flow}{fig:guiflow}
