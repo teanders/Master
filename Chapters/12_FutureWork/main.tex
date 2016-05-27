@@ -1,9 +1,18 @@
 \chapter{Future Work}
-    \section{Nytt kretskort}
-    \label{sec:fwSkjold}
-    \section{Få bilen til å fungere}
-    ny encoder? eller bare endre det til hardware interrupt?
-    oppdatere koden til erlend slik at den utfører arbeidet.
+    \section{Create an Updated PCB Sheild}
+        \label{sec:fwSkjold}
+        As described in Section \ref{sec:finardu}, there were made some changes to the robot after the \acrshort{pcb} shield was printed. This resulted in that the group had to change some of the wires on the \acrshort{pcb} by manually soldering extra wires onto the \acrshort{pcb}. 
+
+        Updating the Eagle files in Appendix \ref{app:wiring} with the changes done on the shield, then print a new \acrshort{pcb} and then solder the board is a good project that should be done. In Appendix \ref{app:wiring} there is also a wiring diagram of the robot as-built, the new Eagle schematic should be updated with the same connections.
+
+    \section{Repair the Encoder}
+        As described in Section \ref{sec:finardu}, the Arduino robot's wheel encoder got damaged during final testing, this is the only part that does not work on the robot. It may be possible to repair the encoder, if not they can be bought from SparkFun \cite{sparkfun}. The software code on the robots that reads the encoder should also be looked at as a more correct position estimate can be found if the robot uses compass, accelerometer and gyroscope in addition to the wheel encoders.
+
+    \section{Communication}
+        As described in Section \ref{sec:nrf51asCom}
+
+
+
     \section{Tenke}
 \begin{itemize}
     \item nRF51:
