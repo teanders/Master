@@ -6,10 +6,15 @@
         Updating the Eagle files in Appendix \ref{app:wiring} with the changes done on the shield, then print a new \acrshort{pcb} and then solder the board is a good project that should be done. In Appendix \ref{app:wiring} there is also a wiring diagram of the robot as-built, the new Eagle schematic should be updated with the same connections.
 
     \section{Repair the Encoder}
-        As described in Section \ref{sec:finardu}, the Arduino robot's wheel encoder got damaged during final testing, this is the only part that does not work on the robot. It may be possible to repair the encoder, if not they can be bought from SparkFun \cite{sparkfun}. The software code on the robots that reads the encoder should also be looked at as a more correct position estimate can be found if the robot uses compass, accelerometer and gyroscope in addition to the wheel encoders.
+        As described in Section \ref{sec:finardu}, the Arduino robot's wheel encoder got damaged during final testing; this is the only part that does not work on the robot. It may be possible to repair the encoder, if not they can be bought from SparkFun \cite{sparkfun}. The software code on the robots that reads the encoder should also be looked at as a better position estimate can be found if the robot uses compass, accelerometer and gyroscope in addition to the wheel encoders.
 
     \section{Communication}
-        As described in Section \ref{sec:nrf51asCom}
+        As described in Section \ref{sec:nrf51asCom} the nRF51-dongle is limited to maximum three connected robots. If it is desired to continue to scale this robot project with more robots, it is necessary to find a better solution than the current nRF51-server and nRF51-peripheral code.
+
+    \section{Java Application}
+        The Java server application is designed to be a foundation for future projects. If the communication gets changed in the future, only the communication package will be affected. Hence, only classes inside the communication package should be changed.
+
+        The application is ready for future improvements like an improved Simulator, \acrshort{ai} or \acrshort{slam}.
 
 
 
