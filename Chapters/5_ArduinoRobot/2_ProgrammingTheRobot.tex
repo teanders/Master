@@ -1,4 +1,4 @@
-\section{Programming the Arduino robot}
+\section{Programming the Arduino Robot}
 \label{sec:programardu}
 It is important to make the Arduino robot able to run on the same program as the other robots; this will save work and help the robots to always have the newest software. The existing robots are programmed in C and since the Arduino language is a set of C/C++ functions it is possible to copy the code directly and use it on the Arduino Mega. It is also possible to setup a computer to directly compile and upload C code to the ATMEGA2560 chip on the Arduino. There are several steps to this, but once everything is installed and properly configured it is quick and easy to make changes and upload new programs. By doing so, the same program can run on all the robots from the different projects, and if there is an improvement in the code in the future, it can easily be installed on all of the robots.
 
@@ -16,7 +16,8 @@ AVRdude comes with a normal Arduino IDE installation and can be found in ``Ardui
 Described in Section \ref{sec:progplatarduino}
 
 \newpage
-\subsection{Configuring software}
+\subsection{Configuring Software}
+\label{sec:configSoftware}
 There are several steps to configure AtmelStudio to work with AVRdude and Arduino. First, we need to generate the correct command-line parameters for AVRdude, then implement them into AtmelStudio. The process is explained below.
 
 \minisection{Create command-line parameters for AVRdude}

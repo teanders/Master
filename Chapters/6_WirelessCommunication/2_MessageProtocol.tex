@@ -15,20 +15,20 @@ The groups sat down and discussed which kind of messages the protocol should imp
  \hline
 
  Handshake          &   Message type \\
-                     &    Physical robot width and length  \\
-                    &   Tower offset from centre of the robot\\
+                    &    Physical robot width and length  \\
+                    &   Tower offset from center of the robot\\
                     &    Axle offset lengthwise \\
-                    &    Sensor offset from tower centre \\
+                    &    Sensor offset from tower center \\
                     &    Initial sensor heading \\
  \hline
- Update              &   Message type \\
+ Update             &   Message type \\
                     &   Robot position (x,y) \\
                     &   Orientation \\
                     &   Tower heading \\
                     &    Sensor values \\
  \hline
- Status                &   Message type \\
-                     &    Idle\\
+ Status             &   Message type \\
+                    &    Idle\\
  \hline
  \end{tabular}
 \end{center}
@@ -65,10 +65,10 @@ At first, the group developed a message protocol using JSON-structure. The benef
 
 \code{\{``Update'':[\{``Orientation'':``60''\},\{``Distance'':``100''\}]\}}
 
-Due to some problems with the nRF51-server software not being able to receive messages with a size greater than 60 Bytes, and the nrf51-peripheral not being able to receive messages larger than 20 Bytes, the group converted the message protocol from JSON-structure to a more compact designed structure. The update message (from server) including the same values as the JSON-example, was then defined as:
+Due to some problems with the nRF51-server software not being able to receive messages with a size greater than 60 Bytes, and the nRF51-peripheral not being able to receive messages larger than 20 Bytes, the group converted the message protocol from JSON-structure to a more compact designed structure. The update message (from server) including the same values as the JSON-example, was then defined as:
 
 \code{\{U,60,100\}}
 
-The remaining message types were defined in the same manner. Figure \ref{fig:messprot} illustrates a simple overview of the messages that are sent and received, while Appendix \ref{app:mesprot} presents all message types and parameters implemented in the message protocol.
+The remaining message types were defined in the same manner. Figure \ref{fig:messprot} illustrates a simple overview of the messages that are sent and received, while Appendix \ref{app:mesprot} ``Message Protocol'' presents all message types and parameters implemented in the message protocol.
 
 \mabox{1}{Results/MessageProtocolSimple}{Flow of the different message types}{fig:messprot}

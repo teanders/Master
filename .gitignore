@@ -9,12 +9,14 @@ main.lot
 main.out
 main.pdf
 main.synctex.gz
+main.synctex.gz(busy)
 main.tdo
 main.toc
 main.bcf
 main.fls
 main.fdb_latexmk
 main.run.xml
+pdflatex14400.fls
 sublimeproject.sublime-project
 sublimeproject.sublime-workspace
 Chapters/glossary.tex

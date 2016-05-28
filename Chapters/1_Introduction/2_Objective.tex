@@ -1,10 +1,22 @@
 \section{Objective}
+The objective of this thesis is to re-implement the functionality of the existing solution in a new server application, using a more suitable programming language, to build a robot based on a new type of microcomputer, as well as to update the wireless communication between robots and server using state-of-the-art technology. 
+
+\minisection{Server Application}
+The new server application should provide real-time features as well as be able to control several robots at the same time. In addition, the application should:
 \begin{itemize}
-    \item Programmere server-applikasjon:
-    \begin{itemize}
-        \item Implementere funksjonaliteten fra den eksisterende løsningen i en ny-designet applikasjon.
-        \item Gjøre designet så modulært(?) som mulig, slik at videre arbeid på applikasjonen (slik som utskiftning av funksjonalitet i pakker/legge til funksjonalitet) krever så lite arbeid som mulig
-        \item Gjøre brukergrensesnittet så avansert som nødvendig, men samtidig brukervennlig
-    \end{itemize}
-    \item Bygge en Arduino-basert robot som skal være en tilførsel til de eksisterende robotene. Hensikten er at antallet roboter skal utvides, men samtidig skal microcomputeren på roboten være av en type som gjør at roboten kan kjøre på samme OS som de andre.
+    \item Implement the functionality from the existing solution.
+    \item Have a system structure that is formed by modules, thus facilitating future work.
+    \item Include a \acrlong{gui} that presents the system's functionality in a more user-friendly way.
 \end{itemize}
+
+\minisection{Robot}
+The new robot should add to the existing collection of robots, and should implement the following:
+\begin{itemize}
+    \item Same sensors as existing robots.
+    \item Arduino as microcomputer.
+    \item Ese (2016) real-time OS.
+    \item The new wireless communication standard.
+\end{itemize}
+
+\minisection{Wireless communication}
+In addition to developing a new server application and building a new robot, the group will select a new standard for the system's wireless communication, and develop the server-side software for the new communication.
