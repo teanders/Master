@@ -18,99 +18,114 @@
 \newpage
 \section{Hardware}
 \label{sec:hardware}
-List of components:
-%\task{Få på kilder på bildene! Pris på nRF51?}
+%The list of hardware is split into two parts, the first part consists of the most important hardware and has picture as well as specification, the second part is a table with the rest of the hardware.
+
 \navn{Arduino Mega 2560 R3}
-\begin{material}{Material/Arduino.jpg}{Arduino Mega}
+\begin{material}{Material/Arduino.jpg}{Arduino Mega 2560 \cite{sparkfun} }
 \item ATmega2560 microcontroller
 \item Input voltage - 7-12V
 \item 54 Digital I/O Pins (14 \acrfull{pwm} outputs)
 \item 16 Analog Inputs
 \item 256k Flash Memory
 \item 16Mhz Clock Speed
+\item Bought from SparkFun
 \item 45.95 USD
 \end{material}
 
-\navn{Bi-Directional Logic Level Converter}
-\begin{material}{Material/Levelconverter.jpg}{Level converter}
-\item 5V signals to 3.3V 
-\item 3.3V signals to 5V
-\item 4 pins on the high side to 4 pins on the low side
-\item 2.95 USD
-\end{material}
-
-\newpage
 \navn{Dual Motor Driver}
-\begin{material}{Material/Motorcontroller.jpg}{Motorcontroller}
+\begin{material}{Material/Motorcontroller.jpg}{Motorcontroller \cite{sparkfun} }
 \item Dual bidirectional motor driver
 \item On-board user-accessible 5V regulator 
 \item Enable and Direction Control Pins
+\item Bought from SparkFun
 \item 34.95 USD
 \end{material}
 
 \navn{IMU, 6 Degrees of Freedom}
-\begin{material}{Material/IMU.jpg}{IMU}
+\begin{material}{Material/IMU.jpg}{IMU \cite{sparkfun} }
 \item Low power consumption
 \item Smart FIFO up to 8 kbyte buffer
 \item Featuring both $I^2C$ and $SPI$
 \item 3.3V device
+\item Bought from SparkFun
 \item 19.95 USD
 \end{material}
-
+\newpage
 \navn{Infrared Proximity Sensor - Sharp }
-\begin{material}{Material/Sharp.jpg}{Infrared Sensor}
-\item 4x infrared sensors
+\begin{material}{Material/Sharp.jpg}{Infrared Sensor \cite{sparkfun} }
+\item 4x \acrfull{ir} sensors
 \item Range: 10-80 cm
+\item Bought from SparkFun
 \item 13.25 USD each
 \end{material}
 
-\newpage
-\navn{Infrared Sensor Jumper Wire - 3-Pin JST}
-\begin{material}{Material/Jumperwire.jpg}{Infrared Sensor Jumper Wire}
-\item 4x Infrared Sensor Jumper Wires
-\item Three pin JST connector
-\item Connects to Sharp sensors
-\item 1.43 USD each
-\end{material}
-
-\navn{Metal Ball caster}
-\begin{material}{Material/BallCaster.jpg}{Ball caster}
-\item 3/8'' metal ball
-\item 2.95 USD
-\end{material}
-
-\navn{Micro servo for IR tower}
-\begin{material}{Material/Servo.jpg}{Micro servo}
-\item Rotation: 180\degree
-\item Metal Gears
-\item 28.8 x 13.8 x 30.2mm
-\item 10.95 USD
-\end{material}
-
-\newpage
 \navn{Nordic Semiconductor nRF51-dongle}
-\begin{material}{Material/Nrf51dongle.JPG}{nRF51-dongle}
+\begin{material}{Material/Nrf51dongle.JPG}{nRF51-dongle \cite{nrf51Dongle} }
 \item Supports Bluetooth Smart, ANT and 2.4GHz
 \item Virtual COM port interface through UART
 \item 6 solder pads for GPIO/interface connections
+\item Bought from Omega Verksted, NTNU
 \end{material}
 
 \navn{Shadow Chassis}
-\begin{material}{Material/Chassis.jpg}{Chassis}
+\begin{material}{Material/Chassis.jpg}{Robot Chassis \cite{sparkfun} }
 \item Light weight ABS plastic.
 \item 196mm Length 
 \item 126mm Width 
 \item 44mm Height
+\item Bought from SparkFun
 \item 12.95 USD
 \end{material}
 
+\newpage
 \navn{Wheels, motors \& encoders}
-\begin{material}{Material/Motor.jpg}{Motor and encoder kit}
+\begin{material}{Material/Motor.jpg}{Motor and encoder kit \cite{sparkfun} }
 \item 2x 65mm Wheels
 \item 2x DG02S Mini DC Gear Motor
 \item 2x Neodymium 8-pole magnets
 \item 2x Hall effect sensor
+\item Bought from SparkFun
 \item 19.95 USD
 \end{material}
 
-Also, some extra parts to modify the chassis were made in the schools Cybernetics Mechanical Workshop. Please refer to Appendix \ref{app:datash} for datasheets regarding the hardware.
+In addition the following parts, see Table \ref{tab:extraMaterial}, have been used during this project.
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{sidewaystable}[ht]
+\centering
+\caption{Extra Material}
+\label{tab:extraMaterial}
+%\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|c|l|l|c|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{C0C0C0}\textbf{Part}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Amount}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Description}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Aquired From}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Cost}} \\ \hline
+3D printed materials & 4 & Motor  holders and axle holders & MW & - \\
+Ball caster & 1 & 3/8" metal ball caster & Sparkfun & 2.95 USD \\
+Battery & 1 & 11,1V 4600mAh lithium battery & Elfa Distrelec & 938 NOK \\
+Breadboard & 1 & For prototyping & EW & - \\
+Capacitors & 2 & 220µF before the micro servo, 100nF before nRF51 & EW & - \\
+Charging towers & 2 & Plastic tower that fits the charging station & MW & - \\
+Compass & 1 & For better position estimates & Erlend Ese & - \\
+Glass fuse & 1 & To protect the robot's circuit & EW & - \\
+LEDs & 3 & Status LEDs, red, green and orange colours & EW & - \\
+Lego bricks & 6 & Various size and form, used on IR tower and gears & Tor Onshus & - \\
+Lego gears & 8 & Gear down the wheels & Tor Onshus & - \\
+Logic level converters & 3 & Bi-Directional, 5V to 3.3V and 3.3V to 5V & Sparkfun & 2.95 USD each \\
+Metallic parts & 5 & For IR tower, motors and ball caster & MW & - \\
+Nuts & 20 & Different sizes & MW & - \\
+PCB shield & 3 & Printed at ElproLab, soldered at EW & Elprolab & - \\
+Resistors & 3 & To limit the current in the LEDs & EW & - \\
+Skrews & 20 & Different sizes & MW & - \\
+Springs & 4 x 4cm & Conductive springs for the charging towers & MW & - \\
+Strips & 15 &  & EW & - \\
+Switches & 2 & On/Off switches for power and charging & EW & - \\
+Wheels & 2 & New softer wheels, 81,25cm diameter & Erlend Ese & - \\
+Wires & - & Various wires used to connect components & EW & - \\\hline
+\end{tabular}
+%}
+\end{sidewaystable}
+
+Please refer to Appendix \ref{app:datash} for datasheets regarding the hardware.
