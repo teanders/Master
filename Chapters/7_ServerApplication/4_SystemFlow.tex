@@ -1,14 +1,14 @@
 \newpage
 \section{System Flow}
 \label{secr:systemflow}
-To better give an insight in the system, the following cases demonstrates how the system flow works during runtime, see Figure \ref{fig:simpleclass} for reference. For more detailed information about the functionality of the system, please refer to the  Javadoc in Appendix \ref{app:javadoc} and the UML diagrams in Appendix \ref{app:uml}.
+\textit{To give better insight in the system, the following cases demonstrates how the system flow works during runtime, see Figure \ref{fig:simpleclass} for reference. For more detailed information about the functionality of the system, please refer to the  Javadoc in Appendix \ref{app:javadoc} and the UML diagrams in Appendix \ref{app:uml}.}
 
 \minisection{Case 1: ``Update message'' received}
 \begin{itemize}
     \item When the nRF51-server dongle receives a message from a connected robot, it writes the message to the connected COM-port.
     \item The class SerialCommunication reads the in-stream, converts the received Bytes into Strings and forwards them to the Inbox class.
     \item The Inbox class simply holds a ``Received message'' list.
-    \item InboxReader retrieves message batches from Inbox and merges them into complete messages. Furthermore, InboxReader uses MessageHandler to parse the complete message and extracts information about ``Sender ID'', ``Message type'', and the message specific information. Finally, the information retrieved gets passed into RobotController.
+    \item InboxReader retrieves message batches from Inbox and merges them into complete messages. Furthermore, InboxReader uses MessageHandler to parse the complete message and extracts information about ``Sender ID'', ``Message type'', and the message-specific information. Finally, the information retrieved gets passed into RobotController.
     \item RobotController adds the update values as Measurements into the related Robot object.
 \end{itemize}
 
@@ -16,7 +16,7 @@ To better give an insight in the system, the following cases demonstrates how th
 \begin{itemize}
     \item When the user clicks the ``Connect robots'' button in the \acrshort{gui}, the MainGUI class creates a ConnectRobotsGUI object which handles the connection routines.
     \item ConnectRobotsGUI starts a scan through a method call for the Application.startScan().
-    \item Application uses Communication to set the nRF51-server dongle to command mode and sending a ``scan'' command to the dongle.
+    \item Application uses Communication to set the nRF51-server dongle to ``command mode'' and sending a ``scan'' command to the dongle.
     \item After 1 second the scan is stopped in the same way it was started, and a ``list'' command is sent to the dongle.
     \item When the list of found devices is returned, the in-stream from the nRF51-dongle at the \acrshort{com}-port is handled by SerialCommunication and Inbox the same way as described in ``Case 1''.
     \item InboxReader interprets the message content (robot IDs and robot names) and passes the found robots to RobotController.

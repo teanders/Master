@@ -10,7 +10,7 @@ To program the nRF51-dongles, the following software has to be downloaded and in
     \item nRFgo Studio v1.21\cite{nrfgo}
     \item Keil MDK-ARM v5.20\cite{keil}
 \end{itemize}
-Drivers for the nRF51-dongle comes with nRFgo Studio, and it is recommended to install the drivers from nRFgo Studio before plugging in the nRF51-dongle. This because Windows tries to use ``Windows Update'' to search for the drivers, and as Windows does not find the correct drivers, it will scan indefinitely.
+Drivers for the nRF51-dongle comes with nRFgo Studio, and it is recommended to install the drivers from nRFgo Studio before plugging the nRF51-dongle. This because Windows tries to use ``Windows Update'' to search for the drivers, and as Windows does not find the correct drivers, it will scan indefinitely.
 
 \minisection{Setting up the nRF51-dongle}
 Having installed the software listed above, the following procedure has to be followed to flash the dongle and prepare it for programming:
@@ -29,7 +29,7 @@ The nRF51-server should be able to communicate with several nRF51-peripherals. I
 
 Nordic Semiconductor, the manufacturer of the dongle, has sample code for communication between two dongles, but this sample code can not be used when several dongles are connected to the server at the same time. There is also another sample code with peripherals and central (server), however in this code, the communication can only go one way. Marco Russi  \cite{marcoRussi} has modified Nordics ``central''-program to enable communication both ways. There was a meeting 12th of February together with Andersen, Ese and Nordic Semiconductor. The agenda of the meeting was to get a briefing about how Nordics peripheral- and central-code works, to get more information about the nRF51-dongle and to do some investigation in Marco Russi's code.
 
-The finished nRF51-server software is a modified version of Marco's central-software, which again is just a modified version of Nordics central software. Whenever the server dongle gets a message, it adds an ID to the message before it gets forwarded to the computers \acrshort{com}-port. The message structure becomes:\code{[robotID]:Message} where ``robotID'' is the ID the dongle generates for the connected peripheral and ``Message'' is the message content received from the peripheral through Bluetooth. 
+The finished nRF51-server software is a modified version of Russi's central-software, which again is just a modified version of Nordics central software. Whenever the server dongle gets a message, it adds an ID to the message before it gets forwarded to the computers \acrshort{com}-port. The message structure becomes:\code{[robotID]:Message} where ``robotID'' is the ID the dongle generates for the connected peripheral and ``Message'' is the message content received from the peripheral through Bluetooth. 
 
 The message content from the peripheral has to be embraced by curly brackets and end with a linebreak (\textbackslash n), and the messages can not contain square brackets. In addition, each message should start with the robot name then a colon before the content. 
 
@@ -37,12 +37,12 @@ Example:\\
 Message from peripheral: \code{Arduino:\{U,100,100,90,0,70,65,40,75\}\textbackslash n} \\
 Server adds robotID: \code{[1]:Arduino:\{U,100,100,90,0,70,65,40,75\}\textbackslash n}
 
-Because of a limitation in Bluetooth, there is a cap of 20 bytes per package sent, this means that if a robot sends a message longer than 20 bytes it gets split into several packages. As of right now the robot can send messages up to 60 bytes, resulting in maximum three packages per message. If more than one robot tries to send messages at the same time, it is possible that the packages get intertwined alternately. The following example illustrates this effect:
+Because of a limitation in Bluetooth, there is a cap of 20 bytes per package sent, this means that if a robot sends a message longer than 20 bytes it gets split into several packages. As of right now, the robot can send messages up to 60 bytes resulting in maximum three packages per message. If more than one robot tries to send messages at the same time, it is possible that the packages get intertwined alternately. The following example illustrates this effect:
 
 Example:\\
 Robot 1 says \code{Hello beautiful World} and Robot 2 says \code{Hello}, the result read from the computer's \acrshort{com}-port could be: \\
 \code{[1]:Robot1:\{Hello beautif[2]:Robot2:\{Hello\}\textbackslash n[1]:Robot1:ul World\}\textbackslash n}
 
-The unravel of the messages happens in the Java applications Communication package, see Section \ref{secr:structure}. 
+The unravel of the messages happens in the Java applications Communication package, see Section \ref{secr:structure}.
 
 The biggest limitation in the nRF51-server software is that it is not possible to connect more than three robots since the central can maximum hold three Bluetooth connections at the same time.

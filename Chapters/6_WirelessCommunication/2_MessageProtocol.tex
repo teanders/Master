@@ -1,6 +1,6 @@
 \section{Creating the Message Protocol}
 \label{sec:cremessprot}
-When implementing the communication between the physical robots and the server software, the groups realised the need for a general message protocol. The message protocol should be complex enough to consist of different message types and parameters as well as being simple enough to be easy to understand and implement in software. 
+When implementing the communication between the physical robots and the server software, the groups realised the need for a general message protocol. The message protocol should be complex enough to consist of different message types and parameters, as well as being simple enough to be easy to understand and implement in software.
 
 The groups sat down and discussed which kind of messages the protocol should implement, and what the messages should include of parameters. The message types and parameters were listed as shown in Table \ref{tab:messprotfromrob} and Table \ref{tab:messprotfromser}.
 
@@ -61,7 +61,7 @@ The groups sat down and discussed which kind of messages the protocol should imp
 \label{tab:messprotfromser}
 \end{table}
 
-At first, the group developed a message protocol using JSON-structure. The benefit of using JSON to structure a message protocol is that it is easy to understand just by reading the message as well as the order of the parameters does not have to be specified. The update message from server in JSON-structure was defined as:
+At first, the group developed a message protocol using JSON-structure. The benefit of using JSON to structure a message protocol is that it is easy to understand just by reading the message, as well as the order of the parameters does not have to be specified. The update message from server in JSON-structure was defined as:
 
 \code{\{``Update'':[\{``Orientation'':``60''\},\{``Distance'':``100''\}]\}}
 

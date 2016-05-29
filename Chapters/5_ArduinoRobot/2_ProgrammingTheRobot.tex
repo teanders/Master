@@ -1,16 +1,17 @@
 \section{Programming the Arduino Robot}
 \label{sec:programardu}
-It is important to make the Arduino robot able to run on the same program as the other robots; this will save work and help the robots to always have the newest software. The existing robots are programmed in C and since the Arduino language is a set of C/C++ functions it is possible to copy the code directly and use it on the Arduino Mega. It is also possible to setup a computer to directly compile and upload C code to the ATMEGA2560 chip on the Arduino. There are several steps to this, but once everything is installed and properly configured it is quick and easy to make changes and upload new programs. By doing so, the same program can run on all the robots from the different projects, and if there is an improvement in the code in the future, it can easily be installed on all of the robots.
+It is important to make the Arduino robot able to use the same software as the other robots; this will save work and help the robots always having the newest software. The existing robots are programmed in C and since the Arduino language is a set of C/C++ functions it is possible to copy the code directly and use it on the Arduino Mega. It is also possible to set-up a computer to directly compile and upload C code to the ATMEGA2560 chip on the Arduino. There are several steps to this, but once everything is installed and properly configured it is quick and easy to make changes and upload new programs. By doing so, the same program can run on all the robots from the different projects, and if there is an improvement in the code in the future, it can easily be installed on all of the robots.
 
 The software that runs on the Arduino robot is the same as the one on the AVR robot, for more information about the software see Ese (2016). The next subsections will focus on how to program C code on the Arduino.
+
 \subsection{Requirements}
-\minisection{AtmelStudio}
-AtmelStudio 6.2 (described in Section \ref{sec:software}), It is possible to configure external tools such as AVRdude, to run straight from AtmelStudio. This makes it easy to edit and upload new programs to an Arduino.
+\minisection{AtmelStudio 6.2}
+It is possible to configure external tools such as AVRdude, to run straight from AtmelStudio 6.2 (described in Section \ref{sec:software}). This makes it easy to edit and upload new programs to an Arduino.
 
 \minisection{AVRdude}
 As mentioned above, AVRdude is used to program the Arduino board. AVRdude is a command-line program and by passing the correct arguments, it is possible to program an Arduino board. The easiest way to find the right arguments is by showing verbose output during an upload from Arduino IDE.
 
-AVRdude comes with a normal Arduino IDE installation and can be found in ``Arduino/hardware/tools/avr/bin/avrdude.exe''. It is also possible to build AVRdude from source files, but this is a much more complex process, so it is recommended to download and install Arduino IDE.
+AVRdude comes with a normal Arduino IDE installation and can be found in ``Arduino/hardware/tools/avr/bin/avrdude.exe''. It is also possible to build AVRdude from source files, but this is a process much more complex, so it is recommended to download and install Arduino IDE.
 
 \minisection{Arduino IDE}
 Described in Section \ref{sec:progplatarduino}
@@ -31,10 +32,10 @@ There are several steps to configure AtmelStudio to work with AVRdude and Arduin
     \begin{lstlisting}
     ATmega2560 (Mega 2560)
     \end{lstlisting}
-    \item Press Tools -> Port and set the right com port. If everything is configured properly, the board will be listed behind the COM port name.
+    \item Press Tools -> Port and set the right \acrshort{com}-port. If everything is configured properly, the board will be listed behind the COM-port name.
     \item Press File -> Preferences and enable verbose on upload.
     \item Upload a minimal example project. If everything is configured properly AVRdude will print out some red text.
-    \item Copy paste the last white line of text into a text editor e.g. Notepad. In our case the line is as follows:
+    \item Copy and paste the last white line of text into a text editor e.g. Notepad. In our case the line is as follows:
     \begin{lstlisting}
     C:/Arduino/hardware/tools/avr/bin/avrdude -CC:/Arduino/hardware/tools/avr/etc/avrdude.conf -v -patmega2560 -cwiring -PCOM6 -b115200 -D -Uflash:w:C:/Users/teanders/AppData/Local/Temp/build219bee5ee35bdb906c90832b67c0fe23.tmp/teste.ino.hex:i
     \end{lstlisting}
