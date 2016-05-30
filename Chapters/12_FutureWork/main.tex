@@ -1,19 +1,19 @@
 \chapter{Future Work}
     \minisection{Create an Updated PCB Sheild}
         \label{sec:fwSkjold}
-        As described in Section \ref{sec:finardu}, there were made some changes to the robot after the \acrshort{pcb} shield was printed. This resulted in that the group had to change some of the wires on the \acrshort{pcb} by manually soldering extra wires onto the \acrshort{pcb}. 
+        As described in Section \ref{sec:finardu}, there were made some changes to the robot after the \acrshort{pcb} shield was printed. This resulted in that the group had to change some of the wiring on the robot by manually soldering extra wires onto the board.
 
-        Updating the Eagle files in Appendix \ref{app:wiring} with the changes done on the shield, then print a new \acrshort{pcb} and then solder the board is a good project that should be done. In Appendix \ref{app:wiring} there is also a wiring diagram of the robot as-built, the new Eagle schematic should be updated with the same connections.
+        Updating the Eagle files in Appendix \ref{app:wiring} with the changes done on the shield, printing a new \acrshort{pcb}, and then solder the board is a work that should be done. In Appendix \ref{app:wiring} there is also a wiring diagram of the robot as-built, the new Eagle schematic should be updated with the same connections.
 
-    \minisection{Repair the Encoder}
-        As described in Section \ref{sec:finardu}, the Arduino robot's wheel encoder got damaged during final testing; this is the only part that does not work on the robot. It may be possible to repair the encoder, if not they can be bought from SparkFun \cite{sparkfun}. The software code on the robots that reads the encoder should also be looked at as a better position estimate can be found if the robot uses compass, accelerometer and gyroscope in addition to the wheel encoders.
+    \minisection{Improving the position estimates}
+        As described in Section \ref{sec:finardu}, the Arduino robot's wheel encoder got damaged during the final testing; this is the only part that does not work on the robot. It may be possible to repair the encoder, but if it is not possible, a new one can be bought from SparkFun\cite{sparkfun}. The software code on the robot that reads the encoder should also be looked at, as a better position estimate can be found if the robot uses both the compass, the accelerometer and the gyroscope in addition to the wheel encoders.
 
     \minisection{Communication}
-        As described in Section \ref{sec:nrf51asCom} the nRF51-dongle is limited to maximum three connected robots. If it is desired to continue to scale this robot project with more robots, it is necessary to find a better solution than the current nRF51-server and nRF51-peripheral code.
+        As described in Section \ref{sec:nrf51asCom}, the nRF51-dongle is limited to maximum three connected robots. If it is desired to continue to extend the robot project with more robots, it is necessary to find a better solution than the current server and peripheral code.
 
-        The message protocol described in Section \ref{sec:cremessprot} may be extended to include additional messages, e.g. ``Wall hit'' and ``Battery low'' statuses. If this is desired, the code in Communication package should be expanded to include these messages
-.
+        The message protocol described in Section \ref{sec:cremessprot} may also be extended to include additional messages, e.g. ``Wall hit'' and ``Battery low'' statuses. If this is desired, the code in the Communication package in the Java application should be modified to include these messages.
+        
     \minisection{Java Application}
-        The Java server application is designed to be a foundation for future projects. If the communication gets changed in the future, only the communication package will be affected. Hence, only classes inside the communication package should be changed.
+        The Java server application is designed to be a solid foundation for future projects. If the communication gets changed in the future, only the communication package will be affected. Hence, only classes inside the communication package should be changed.
 
         The application is ready for future improvements like an improved Simulator, Artificial Intelligence or \acrshort{slam}.
