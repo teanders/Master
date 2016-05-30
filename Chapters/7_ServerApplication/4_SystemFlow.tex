@@ -6,7 +6,7 @@
 \minisection{Case 1: ``Update message'' received}
 \begin{itemize}
     \item When the nRF51-server dongle receives a message from a connected robot, it writes the message to the connected COM-port.
-    \item The class SerialCommunication reads the in-stream, converts the received Bytes into Strings and forwards them to the Inbox class.
+    \item The class SerialCommunication reads the in-stream, converts the received bytes into Strings and forwards them to the Inbox class.
     \item The Inbox class simply holds a ``Received message'' list.
     \item InboxReader retrieves message batches from Inbox and merges them into complete messages. Furthermore, InboxReader uses MessageHandler to parse the complete message and extracts information about ``Sender ID'', ``Message type'', and the message-specific information. Finally, the information retrieved gets passed into RobotController.
     \item RobotController adds the update values as Measurements into the related Robot object.

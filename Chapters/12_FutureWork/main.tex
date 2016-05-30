@@ -6,7 +6,7 @@
         Updating the Eagle files in Appendix \ref{app:wiring} with the changes done on the shield, printing a new \acrshort{pcb}, and then solder the board is a work that should be done. In Appendix \ref{app:wiring} there is also a wiring diagram of the robot as-built, the new Eagle schematic should be updated with the same connections.
 
     \minisection{Improving the position estimates}
-        As described in Section \ref{sec:finardu}, the Arduino robot's wheel encoder got damaged during the final testing; this is the only part that does not work on the robot. It may be possible to repair the encoder, but if it is not possible, a new one can be bought from SparkFun\cite{sparkfun}. The software code on the robot that reads the encoder should also be looked at, as a better position estimate can be found if the robot uses both the compass, the accelerometer and the gyroscope in addition to the wheel encoders.
+        As described in Section \ref{sec:finardu}, the Arduino-robot's wheel encoder got damaged during the final testing; this is the only part that does not work on the robot. It may be possible to repair the encoder, but if it is not possible, a new one can be bought from SparkFun\cite{sparkfun}. The software code on the robot that reads the encoder should also be looked at, as a better position estimate can be found if the robot uses both the compass, the accelerometer and the gyroscope in addition to the wheel encoders.
 
     \minisection{Communication}
         As described in Section \ref{sec:nrf51asCom}, the nRF51-dongle is limited to maximum three connected robots. If it is desired to continue to extend the robot project with more robots, it is necessary to find a better solution than the current server and peripheral code.

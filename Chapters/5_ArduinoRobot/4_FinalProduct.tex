@@ -1,7 +1,7 @@
 \newpage
 \section{The Final Product}
 \label{sec:finardu}
-The finished Arduino robot is pictured in Figure \ref{fig:arduinorobotferdig}. In addition to the improvements described above, some minor improvements were made. Three \acrshort{led}s (Red, Orange, Green) were added to help with debugging, and the AVR robot has the same three \acrshort{led}s. To assist the position estimation, Ese (2016) added a compass.
+The finished Arduino-robot is pictured in Figure \ref{fig:arduinorobotferdig}. In addition to the improvements described above, some minor improvements were made. Three \acrshort{led}s (Red, Orange, Green) were added to help with debugging, and the AVR-robot has the same three \acrshort{led}s. To assist the position estimation, Ese (2016) added a compass.
 
 As seen in Figure \ref{fig:arduinorobotferdig} adding the gears described in Section \ref{sec:motoraxle} resulted in moving the wheels 47mm forward, and the group therefore moved the \acrshort{imu} so that it is still mounted between the wheels. In addition to moving the wheels, the wheels themselves was replaced with larger and softer wheels. Softer wheels help with traction, which again minimise error when estimating the position. The new wheels are 82mm in diameter and the gear ratio is 12.5:1.
 
@@ -9,4 +9,4 @@ After the \acrshort{pcb} was printed, there were discovered a few mistakes on th
 
 During final testing of the robot, the wheel encoder got damaged, resulting in wrong position estimates when the robot is driving. This is the only part that does not work on the robot, and therefore the code lines that makes the robot perform its commands are commented out. The robot can still be used in cooperation with other robots as the communication and \acrshort{ir} scanning works, but the robot will not move.
 \vspace*{20pt}
-\mabox{0.7}{Results/ArduinoRobotFin.png}{The finished Arduino Robot}{fig:arduinorobotferdig}
+\mabox{0.7}{Results/ArduinoRobotFin.png}{The finished Arduino-robot}{fig:arduinorobotferdig}

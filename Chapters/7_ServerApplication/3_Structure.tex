@@ -7,7 +7,7 @@
 The ``Application'' module is the main module in the system. The module is the one that ties the system together by being the main artery for communication and program flow internally in the program. ``Application'' instantiates the other modules and connects the packages in the program.
 
 \minisection{Robot}
-The ``Robot'' module represents the physical robots that the system uses. When connecting to a real-life robot, e.g. the Arduino robot, an object related to that robot is instantiated in the module. The object holds information about the associated robot and contains measurements received from the robot.
+The ``Robot'' module represents the physical robots that the system uses. When connecting to a real-life robot, e.g. the Arduino-robot, an object related to that robot is instantiated in the module. The object holds information about the associated robot and contains measurements received from the robot.
 
 \minisection{Communication}
 The ``Communication'' module represents the link between the physical world and the server application. It takes care of the serial communication with the nRF51-dongle as well as providing message input and output. The module also provides functionality for encoding and decoding messages.

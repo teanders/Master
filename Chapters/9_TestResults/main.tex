@@ -1,9 +1,9 @@
 \chapter{Testing the System}
-In addition to communication test in Section \ref{sec:testcom}, the groups arranged a full-system test when all parts of the system were finished and implemented. A maze was built, see Figure \ref{fig:labyrinth}, and both the Arduino and the AVR robot was placed in it. As it is important for the application to know how the robots are positioned relative to each other, the distance between them was measured.
+In addition to communication test in Section \ref{sec:testcom}, the groups arranged a full-system test when all parts of the system were finished and implemented. A maze was built, see Figure \ref{fig:labyrinth}, and both the Arduino and the AVR-robot was placed in it. As it is important for the application to know how the robots are positioned relative to each other, the distance between them was measured.
 
 \mabox{.8}{Results/Labyrinth.PNG}{Maze used during the testing of the system}{fig:labyrinth}
 
-As the Arduino robot's wheel encoder was broken, as elaborated in \ref{sec:finardu}, the robot was placed in the center of the maze. Even though it could not perform the orders given to it by the server application, it performed scans and sent update messages during the test. The groups performed three tests to validate that the system could provide consistent results.
+As the Arduino-robot's wheel encoder was broken, as elaborated in \ref{sec:finardu}, the robot was placed in the center of the maze. Even though it could not perform the orders given to it by the server application, it performed scans and sent update messages during the test. The groups performed three tests to validate that the system could provide consistent results.
 
 Figure \ref{fig:mapresult} presents the maps created by the three tests, as well as including a fourth mapping done during the demonstration of the project. As can be seen, the four tests gave results that are similar, but none of them are exact replicas of the real world maze. The reason for this is that the position estimation diverges over time. Let's say that a robot starts in the top left corner and moves one lap around the maze. The wall that is first drawn and the wall that is last drawn during the mapping may not be perfectly aligned, even though they represents the exact same wall in the real world.
 
