@@ -29,13 +29,17 @@
 \input{Chapters/11_Conclusion/main}
 \input{Chapters/12_FutureWork/main}
 
-\listoftodos[Notes]  					% Skal bort
+%\listoftodos[Notes]  					% Skal bort
+\glsaddall
+
 \printglossary		 					% Kommer, greier ikke å generere i Sublime, må bruke share latex
 \addcontentsline{toc}{chapter}{Glossary}
-%\bibliographystyle{apa\}				% apa = akademisk, men om vi kommenterer det ut blir det "engineering way", noe som er lettere å forstå
 
-\addcontentsline{toc}{chapter}{\bibname}
+%\bibliographystyle{apa\}				% apa = akademisk, men om vi kommenterer det ut blir det "engineering way", noe som er lettere å forstå
+\cleardoublepage
+
 %\bibliography{refs}
+\addcontentsline{toc}{chapter}{\bibname}
 \printbibliography
 
 \input{Appendices/main}
