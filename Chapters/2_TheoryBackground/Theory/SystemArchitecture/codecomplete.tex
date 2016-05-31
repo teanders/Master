@@ -1,19 +1,19 @@
 %Grammarly
 \subsection{Code Complete}
-\subsubsection{Software Construction}
+\minisection{Software Construction}
 \label{sec:softconstruct}
 Developing software is a complicated process, and there are several activities that form the software construction. Topics like ``Problem definition'', ``Software architecture'', ``Integration'' and ``System testing'' are central in the process of constructing a well functioning application (see Figure \ref{fig:softconstruct}).
 
 \mabox{0.6}{Theory/softwareconstruction.PNG}{Activities that form software construction \cite{stevemcconnell2004}}{fig:softconstruct}
 
-When designing software, it is important to minimise the complexity. Make the system easy to understand, without making designs that are ``clever'' inside your head. The system should be self-explanatory in the means that it should be easy to understand if someone in the future would want to do some maintenance to it. It is important that the connection between different parts of the programme follow the principles of ``High cohesion'' and ``Loose coupling'':
+When designing software, it is important to minimise the complexity. Make the system easy to understand, without making designs that are ``clever'' inside your head. The system should be self-explanatory in the means that it should be easy to understand if someone in the future would want to do some maintenance to it. It is important that the connection between different parts of the program follow the principles of ``High cohesion'' and ``Loose coupling'':
 \begin{itemize}
-    \item High cohesion - Cohesion refers to how the classes in the system are defined to take care of one responsibility, and how the different classes use methods and such from one another \cite{adamcarlson}.
-    \item Low coupling - Good abstractions, encapsulation and information hiding makes the number of interconnections as low as possible, and thus leads to loose coupling \cite{adamcarlson}.
+    \item Cohesion - Cohesion refers to how the classes in the system are defined to take care of one responsibility, and how the different classes use methods and such from one another \cite{adamcarlson}.
+    \item Coupling - Good abstractions, encapsulation and information hiding makes the number of interconnections as low as possible, and thus leads to loose coupling \cite{adamcarlson}.
 \end{itemize}
 Extensibility and re-usability results in easier maintenance and implementation as well, and should therefore be taken into account. 
 
-\subsubsection{Levels of Design}
+\minisection{Levels of Design}
 \label{sec:levdes}
 When starting the design of a software application, Steven McConnell mentions the five levels of design. The five levels of design, shown in Figure \ref{fig:5levels}, describes the levels of detail in a software system and how the system developer should approach the problem \cite{stevemcconnell2004}:
 \begin{itemize}
@@ -25,9 +25,9 @@ When starting the design of a software application, Steven McConnell mentions th
 \end{itemize}
 \mabox{.8}{Theory/5levels.PNG}{The five levels of design in a program \cite{stevemcconnell2004}}{fig:5levels}
 
-\subsubsection{Naming Conventions}
+\minisection{Naming Conventions}
 \label{sec:nameconv}
-It is important to choose good, describing names when programming a complex software system. The routine-name should describe the behaviour and the output of the routine, and in that way, it is clear what the routine should be used to do. The routines should not be differentiated by number, but by functionality. The variables should also have describing names, and be differentiated from the types using lower case on the first letter (TypeName variabelName).
+It is important to choose good, describing names when programming a complex software system. The routine-name should describe the behaviour and the output of the routine, and in that way, it is clear what the routine should be used to do. The routines should not be differentiated by number, but by functionality. The variables should also have describing names, and be differentiated from the types using lower case on the first letter: \code{TypeName variabelName}
 
 The different programming languages have different conventions. Some of the Java-specific conventions are \cite{stevemcconnell2004}:
 \begin{itemize}

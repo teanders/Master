@@ -1,13 +1,13 @@
 %Grammarly
 \subsection{Concurrent Programming}
 \label{sec:concurrentprog}
-A concurrent programme consists of several streams of operations that may execute concurrently. The programme is built in a way that the streams execute at the same time and they can communicate with one another \cite{cartwright2000}.
+A concurrent program consists of several streams of operations that may execute concurrently. The program is built in a way that the streams execute at the same time and they can communicate with one another \cite{cartwright2000}.
 
-\subsubsection{Threading}
+\minisection{Threading}
 \label{sec:threading}
 Each stream of instruction in a program is called a \textit{thread}. If a multi-threaded application is running, one of the threads may override the others in a way that blocks them from running. This is called \textit{starving}. To prevent starving (the Java language does not guarantee this), most \acrshort{jvm} provides fairness allowing all of the threads to execute their tasks \cite{cartwright2000}.
 
-\subsubsection{Shared Objects}
+\minisection{Shared Objects}
 \label{sec:sharedobj}
 According to ``The little book of semaphores''\cite{downey2008}, objects and variables that are accessed by several threads are called ``shared objects/variables''. The use of shared objects is a way to make threads interact with one another, but it is also a way to introduce concurrency problems to the application. Some of the problems and solutions are further explained below.
 
